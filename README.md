@@ -18,6 +18,17 @@ Projektin aiheena on lipunmyyntijärjestelmän kehittäminen asiakkaana olevalle
 Palvelu toteutetaan Javalla Spring Boot -kehystä käyttäen.
 
 ## Järjestelmän määrittely
+### Käyttäjäroolit
+Ensimmäisessä vaiheessa järjestelmän käyttäjille on tunnistettu seuraavat roolit:
+* **Tapahtumien määrittelijä**. Henkilö, joka määrittelee järjestelmään tapahtumat, joihin myydään lippuja sekä eri lipputyypit tapahtumakohtaisesti.
+* **Raportoija**. Henkilö, joka tarvitsee järjestelmästä raportit eri tapahtumiin myydyistä lipusta.
+* **Lipunmyyjä**. Henkilö, joka myy ja tulostaa asiakkaalle liput.
+* **Lipuntarkastaja**. Henkilö joka tarkastaa liput tapahtumassa.
+* **Asiakas**. Henkilö, joka ostaa lipun johonkin tapahtumaan.
 
+Alustava käyttötapauskaavio:
+![käyttötapauskaavio](...roolit.jpeg)
 
 ## Käyttöliittymä
+
+Alustavat käyttöliittymän rautalankamallit on tallennettu [Moodleen](https://hhmoodle.haaga-helia.fi/pluginfile.php/2113426/mod_resource/content/1/TicketGuru%20UI.pdf).

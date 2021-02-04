@@ -27,6 +27,7 @@ Ensimmäisessä vaiheessa järjestelmän käyttäjille on tunnistettu seuraavat 
 * **Asiakas**. Henkilö, joka ostaa lipun johonkin tapahtumaan.
 
 Alustava käyttötapauskaavio:
+
 ![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/feature_tm/roolit.png)
 
 ## Käyttöliittymä

@@ -28,7 +28,7 @@ Ensimmäisessä vaiheessa järjestelmän käyttäjille on tunnistettu seuraavat 
 
 Alustava käyttötapauskaavio:
 
-![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/roolit.jpg)
+![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/roolit1.jpg)
 
 ### Käyttäjätarinat
 

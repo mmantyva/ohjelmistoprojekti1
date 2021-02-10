@@ -53,7 +53,7 @@ Alustava käyttötapauskaavio:
 Alustavat käyttöliittymän rautalankamallit on tallennettu [Moodleen](https://hhmoodle.haaga-helia.fi/pluginfile.php/2113426/mod_resource/content/1/TicketGuru%20UI.pdf).
 
 ## Tietokanta
-Järjestelmän tietokantarakenne koostuu neljästä tietokantataulusta: tapahtumista, siihen myytävistä erilaisista lipputyypeistä, myyntitapahtumista ja yksitäisistä lipuista.
+Järjestelmän tietokantarakenne koostuu neljästä tietokantataulusta: tapahtumista, siihen myytävistä erilaisista lipputyypeistä, myyntitapahtumista ja yksittäisistä lipuista.
 
 Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
@@ -62,20 +62,20 @@ Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 Tietokantaa sisältyvät elementit ja niiden atribuutit ovat:
 
 > ### _Tapahtumat_
-> _Tapahtumat-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä_
+> _Tapahtumat-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
 > tapahtuma_id | int PK | Tapahtuman id
 > nimi | varchar(50) |  Tapahtuman nimi
 > aika | datetime | Tapahtuman ajankohta
-> paikka | varchar(50) | Paikka jossa tapahtuma järjestetään
-> kaupunki | varchar(50) | Kaupunki jossa tapahtuma järjestetään
+> paikka | varchar(50) | Paikka, jossa tapahtuma järjestetään
+> kaupunki | varchar(50) | Kaupunki, jossa tapahtuma järjestetään
 > kuvaus | varchar(250) | Lyhyt kuvaus tapahtumasta
 #
 
 > ### _Lipputyypit_
-> _Lipputyypit-taulussa on tiedot erilaisista lipputyypeistä joita tapahtumaan myydään. Jokainen lippu tyyppi kuuluu yhteen tapahtumaan._
+> _Lipputyypit-taulussa on tiedot erilaisista lipputyypeistä, joita tapahtumaan myydään. Jokainen lipputyyppi kuuluu yhteen tapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
@@ -85,7 +85,7 @@ Tietokantaa sisältyvät elementit ja niiden atribuutit ovat:
 > kuvaus | varchar(50) | Lipputyypin kuvaus (esim. aikuinen)
 #
 > ### _Myyntitapahtumat_
-> _Myyntitapahtumat-taulussa on tiedot kaikista myytitapahtumista. Yksi myyntitapahtuma voi sisältää useita lippuja, useisiin eri tapahtumiin._
+> _Myyntitapahtumat-taulussa on tiedot kaikista myyntitapahtumista. Yksi myyntitapahtuma voi sisältää useita lippuja, useisiin eri tapahtumiin._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
@@ -93,7 +93,7 @@ Tietokantaa sisältyvät elementit ja niiden atribuutit ovat:
 > aika | datetime |  Myyntitapahtuman ajankohta
 #
 > ### _Liput_
-> _Liput-taulussa on tiedot yksitäisistä myydistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
+> _Liput-taulussa on tiedot yksittäisistä myydyistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------

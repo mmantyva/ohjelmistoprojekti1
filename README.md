@@ -71,7 +71,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > esiintyja | varchar(50) | Tapahtumassa esiintyvä artisti, ryhmä tms
 > kapasiteetti | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
 > tapahtuma_aika | datetime | Tapahtuman ajankohta
-> paikka_nimi | varchar(50) | Paikka, jossa tapahtuma järjestetään
+> paikka_id | int FK) | Paikan_id, jossa tapahtuma järjestetään
 > kuvaus | varchar(250) | Lyhyt kuvaus tapahtumasta
 #
 

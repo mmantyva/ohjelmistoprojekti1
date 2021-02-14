@@ -6,7 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Lippu {
@@ -17,7 +16,7 @@ public class Lippu {
 	
 	@ManyToOne
 	@JoinColumn(name = "tyyppi_id")
-	private Tyyppi tyyppi_id;
+	private Lipputyyppi tyyppi_id;
 	
 	@ManyToOne
 	@JoinColumn(name = "myynti_id")
@@ -25,7 +24,7 @@ public class Lippu {
 
 	public Lippu() {}
 	
-	public Lippu(Long id, String lippu_id, Tyyppi tyyppi_id, Myynti myynti_id) {
+	public Lippu(Long id, String lippu_id, Lipputyyppi tyyppi_id, Myynti myynti_id) {
 		super();
 		this.id = id;
 		this.lippu_id = lippu_id;
@@ -49,11 +48,11 @@ public class Lippu {
 		this.lippu_id = lippu_id;
 	}
 
-	public Tyyppi getTyyppi_id() {
+	public Lipputyyppi getTyyppi_id() {
 		return tyyppi_id;
 	}
 
-	public void setTyyppi_id(Tyyppi tyyppi_id) {
+	public void setTyyppi_id(Lipputyyppi tyyppi_id) {
 		this.tyyppi_id = tyyppi_id;
 	}
 

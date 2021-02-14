@@ -6,19 +6,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Tapahtuma {
 	
 	@Id
-    @Generated(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private long tapahtuma_id;
 	private String tapahtuma_nimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
 	private int kapasiteetti;
 	
 	@ManyToOne
-	@JoinColumnName(name="paikka_id")
+	@JoinColumn(name="paikka_id")
 	private Paikka paikka_id;
 	
 	public Tapahtuma() {
@@ -73,8 +72,16 @@ public class Tapahtuma {
 		this.kapasiteetti = kapasiteetti;
 	}
 
+	public Paikka getPaikka_id() {
+		return paikka_id;
+	}
+
+	public void setPaikka_id(Paikka paikka_id) {
+		this.paikka_id = paikka_id;
+	}
+
 	public Tapahtuma(long tapahtuma_id, String tapahtuma_nimi, String tapahtuma_aika, String esiintyja,
-			String tapahtuma_kuvaus, int kapasiteetti) {
+			String tapahtuma_kuvaus, int kapasiteetti, Paikka paikka_id) {
 		super();
 		this.tapahtuma_id = tapahtuma_id;
 		this.tapahtuma_nimi = tapahtuma_nimi;
@@ -82,14 +89,18 @@ public class Tapahtuma {
 		this.esiintyja = esiintyja;
 		this.tapahtuma_kuvaus = tapahtuma_kuvaus;
 		this.kapasiteetti = kapasiteetti;
+		this.paikka_id = paikka_id;
 	}
 
 	@Override
 	public String toString() {
 		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tapahtuma_nimi + ", tapahtuma_aika="
 				+ tapahtuma_aika + ", esiintyja=" + esiintyja + ", tapahtuma_kuvaus=" + tapahtuma_kuvaus
-				+ ", kapasiteetti=" + kapasiteetti + "]";
+				+ ", kapasiteetti=" + kapasiteetti + ", paikka_id=" + paikka_id + "]";
 	}
+
+	
+
 	
 }
 	

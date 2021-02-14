@@ -2,6 +2,7 @@ package src.main.java.swd4ta022.ticketguru.domain;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,7 @@ public class Myynti {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long myynti_id;
-	private String myynti_aika; //en jaksanut nyt tässä vaiheessa miettiä tietotyyppejä niin laitoin stringin paikkaa pitämään :D
+	private String myynti_aika; //en jaksanut nyt tï¿½ssï¿½ vaiheessa miettiï¿½ tietotyyppejï¿½ niin laitoin stringin paikkaa pitï¿½mï¿½ï¿½n :D
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="myynti")
 	private List<Lippu> liput;

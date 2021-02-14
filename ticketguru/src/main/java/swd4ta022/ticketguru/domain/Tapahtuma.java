@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Tapahtuma {
@@ -13,6 +16,10 @@ public class Tapahtuma {
 	private long tapahtuma_id;
 	private String tapahtuma_nimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
 	private int kapasiteetti;
+	
+	@ManyToOne
+	@JoinColumnName(name="paikka_id")
+	private Paikka paikka_id;
 	
 	public Tapahtuma() {
 		super();

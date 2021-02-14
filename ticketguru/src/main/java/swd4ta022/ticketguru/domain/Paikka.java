@@ -1,9 +1,12 @@
 package swd4ta022.ticketguru.domain;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Paikka {
@@ -11,6 +14,9 @@ public class Paikka {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long paikka_id;
 	private String paikka_nimi, katuosoite, postinumero, kaupunki;
+	
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="paikka")
+	private List<Tapahtuma> tapahtumat;
 		
 	public Paikka(long paikka_id, String paikka_nimi, String katuosoite, String postinumero, String kaupunki) {
 		super();
@@ -56,8 +62,14 @@ public class Paikka {
 	public void setKaupunki(String kaupunki) {
 		this.kaupunki = kaupunki;
 	}
-	
-	
+
+	public List<Tapahtuma> getTapahtumat() {
+		return tapahtumat;
+	}
+
+	public void setTapahtumat(List<Tapahtuma> tapahtumat) {
+		this.tapahtumat = tapahtumat;
+	}
 	
 
 }

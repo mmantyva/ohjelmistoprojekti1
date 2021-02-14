@@ -59,7 +59,7 @@ Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
 ![Tietokantakaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/tietokanta.jpg)
 
-Tietokantaa sisältyvät elementit ja niiden atribuutit ovat:
+Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakemistossa:
 
 > ### _Tapahtumat_
 > _Tapahtumat-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä._
@@ -67,11 +67,24 @@ Tietokantaa sisältyvät elementit ja niiden atribuutit ovat:
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
 > tapahtuma_id | int PK | Tapahtuman id
-> nimi | varchar(50) |  Tapahtuman nimi
-> aika | datetime | Tapahtuman ajankohta
-> paikka | varchar(50) | Paikka, jossa tapahtuma järjestetään
-> kaupunki | varchar(50) | Kaupunki, jossa tapahtuma järjestetään
+> tapahtuma_nimi | varchar(50) |  Tapahtuman nimi
+> esiintyja | varchar(50) | Tapahtumassa esiintyvä artisti, ryhmä tms
+> kapasiteetti | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
+> tapahtuma_aika | datetime | Tapahtuman ajankohta
+> paikka_id | int FK) | Paikan_id, jossa tapahtuma järjestetään
 > kuvaus | varchar(250) | Lyhyt kuvaus tapahtumasta
+#
+
+> ### _Paikat_
+>_Paikat-taulu sisältää tiedot tiloista, joissa tapahtumia voidaan järjestää._
+>
+> Kenttä | Tyyppi | Kuvaus
+> ------ | ------ | ------
+> paikka_id | int PK | Tilan/paikan id
+> paikka_nimi | varchar(50) | Paikan nimi
+> katuosoite | varchar(50) | Kohteen katuosoite
+> postinumero | char(5) | Kohteen postinumero
+> kaupunki | varchar(20) | Kaupunki, jossa kohde sijaitsee
 #
 
 > ### _Lipputyypit_
@@ -82,21 +95,22 @@ Tietokantaa sisältyvät elementit ja niiden atribuutit ovat:
 > tyyppi_id | int PK | Lipputyypin id
 > tapahtuma_id | int FK |  Tapahtuman id
 > hinta | float | Lipun hinta
-> kuvaus | varchar(50) | Lipputyypin kuvaus (esim. aikuinen)
+> tyyppi_kuvaus | varchar(50) | Lipputyypin kuvaus (esim. aikuinen)
 #
+
 > ### _Myyntitapahtumat_
 > _Myyntitapahtumat-taulussa on tiedot kaikista myyntitapahtumista. Yksi myyntitapahtuma voi sisältää useita lippuja, useisiin eri tapahtumiin._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
 > myynti_id | int PK | Myyntitapahtuman id
-> aika | datetime |  Myyntitapahtuman ajankohta
+> myynti_aika | datetime |  Myyntitapahtuman ajankohta
 #
 > ### _Liput_
 > _Liput-taulussa on tiedot yksittäisistä myydyistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> lippu_id | int PK | Lipun id, lipun yksilöllinen koodi
+> lippu_id | int PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
 > tyyppi_id | int FK |  Lipputyypin id
 > myynti_id | int FK | Myyntitapahtuman id

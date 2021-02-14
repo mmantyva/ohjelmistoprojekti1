@@ -9,77 +9,83 @@ import javax.persistence.Id;
 public class Tapahtuma {
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
-	private String nimi, aika, paikka, kaupunki, kuvaus;
+    @Generated(strategy=GenerationType.AUTO)
+	private long tapahtuma_id;
+	private String tapahtuma_nimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
+	private int kapasiteetti;
 	
 	public Tapahtuma() {
 		super();
 	}
 
-	public Tapahtuma(long id, String nimi, String aika, String paikka, String kaupunki, String kuvaus) {
+	public long getTapahtuma_id() {
+		return tapahtuma_id;
+	}
+
+	public void setTapahtuma_id(long tapahtuma_id) {
+		this.tapahtuma_id = tapahtuma_id;
+	}
+
+	public String getTapahtuma_nimi() {
+		return tapahtuma_nimi;
+	}
+
+	public void setTapahtuma_nimi(String tapahtuma_nimi) {
+		this.tapahtuma_nimi = tapahtuma_nimi;
+	}
+
+	public String getTapahtuma_aika() {
+		return tapahtuma_aika;
+	}
+
+	public void setTapahtuma_aika(String tapahtuma_aika) {
+		this.tapahtuma_aika = tapahtuma_aika;
+	}
+
+	public String getEsiintyja() {
+		return esiintyja;
+	}
+
+	public void setEsiintyja(String esiintyja) {
+		this.esiintyja = esiintyja;
+	}
+
+	public String getTapahtuma_kuvaus() {
+		return tapahtuma_kuvaus;
+	}
+
+	public void setTapahtuma_kuvaus(String tapahtuma_kuvaus) {
+		this.tapahtuma_kuvaus = tapahtuma_kuvaus;
+	}
+
+	public int getKapasiteetti() {
+		return kapasiteetti;
+	}
+
+	public void setKapasiteetti(int kapasiteetti) {
+		this.kapasiteetti = kapasiteetti;
+	}
+
+	public Tapahtuma(long tapahtuma_id, String tapahtuma_nimi, String tapahtuma_aika, String esiintyja,
+			String tapahtuma_kuvaus, int kapasiteetti) {
 		super();
-		this.id = id;
-		this.nimi = nimi;
-		this.aika = aika;
-		this.paikka = paikka;
-		this.kaupunki = kaupunki;
-		this.kuvaus = kuvaus;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getNimi() {
-		return nimi;
-	}
-
-	public void setNimi(String nimi) {
-		this.nimi = nimi;
-	}
-
-	public String getAika() {
-		return aika;
-	}
-
-	public void setAika(String aika) {
-		this.aika = aika;
-	}
-
-	public String getPaikka() {
-		return paikka;
-	}
-
-	public void setPaikka(String paikka) {
-		this.paikka = paikka;
-	}
-
-	public String getKaupunki() {
-		return kaupunki;
-	}
-
-	public void setKaupunki(String kaupunki) {
-		this.kaupunki = kaupunki;
-	}
-
-	public String getKuvaus() {
-		return kuvaus;
-	}
-
-	public void setKuvaus(String kuvaus) {
-		this.kuvaus = kuvaus;
+		this.tapahtuma_id = tapahtuma_id;
+		this.tapahtuma_nimi = tapahtuma_nimi;
+		this.tapahtuma_aika = tapahtuma_aika;
+		this.esiintyja = esiintyja;
+		this.tapahtuma_kuvaus = tapahtuma_kuvaus;
+		this.kapasiteetti = kapasiteetti;
 	}
 
 	@Override
 	public String toString() {
-		return "Tapahtuma [id=" + id + ", nimi=" + nimi + ", aika=" + aika + ", paikka=" + paikka + ", kaupunki="
-				+ kaupunki + ", kuvaus=" + kuvaus + "]";
+		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tapahtuma_nimi + ", tapahtuma_aika="
+				+ tapahtuma_aika + ", esiintyja=" + esiintyja + ", tapahtuma_kuvaus=" + tapahtuma_kuvaus
+				+ ", kapasiteetti=" + kapasiteetti + "]";
 	}
-
 	
 }
+	
+	
+	
+	

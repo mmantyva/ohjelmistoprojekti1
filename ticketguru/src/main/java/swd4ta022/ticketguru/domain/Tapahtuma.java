@@ -18,7 +18,7 @@ public class Tapahtuma {
 	
 	@ManyToOne
 	@JoinColumn(name="paikka_id")
-	private Paikka paikka_id;
+	private Paikka paikka;
 	
 	public Tapahtuma() {
 		super();
@@ -72,31 +72,31 @@ public class Tapahtuma {
 		this.kapasiteetti = kapasiteetti;
 	}
 
-	public Paikka getPaikka_id() {
-		return paikka_id;
+	public Paikka getPaikka() {
+		return paikka;
 	}
 
-	public void setPaikka_id(Paikka paikka_id) {
-		this.paikka_id = paikka_id;
+	public void setPaikka(Paikka paikka) {
+		this.paikka = paikka;
 	}
 
-	public Tapahtuma(long tapahtuma_id, String tapahtuma_nimi, String tapahtuma_aika, String esiintyja,
-			String tapahtuma_kuvaus, int kapasiteetti, Paikka paikka_id) {
+	public Tapahtuma(String tapahtuma_nimi, String tapahtuma_aika, String esiintyja,
+			String tapahtuma_kuvaus, int kapasiteetti, Paikka paikka) {
 		super();
-		this.tapahtuma_id = tapahtuma_id;
+		
 		this.tapahtuma_nimi = tapahtuma_nimi;
 		this.tapahtuma_aika = tapahtuma_aika;
 		this.esiintyja = esiintyja;
 		this.tapahtuma_kuvaus = tapahtuma_kuvaus;
 		this.kapasiteetti = kapasiteetti;
-		this.paikka_id = paikka_id;
+		this.paikka = paikka;
 	}
 
 	@Override
 	public String toString() {
 		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tapahtuma_nimi + ", tapahtuma_aika="
 				+ tapahtuma_aika + ", esiintyja=" + esiintyja + ", tapahtuma_kuvaus=" + tapahtuma_kuvaus
-				+ ", kapasiteetti=" + kapasiteetti + ", paikka_id=" + paikka_id + "]";
+				+ ", kapasiteetti=" + kapasiteetti + ", paikka_id=" + paikka + "]";
 	}
 
 	

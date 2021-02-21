@@ -16,20 +16,20 @@ public class Lippu {
 	
 	@ManyToOne
 	@JoinColumn(name = "tyyppi_id")
-	private Lipputyyppi tyyppi_id;
+	private Lipputyyppi tyyppi;
 	
 	@ManyToOne
 	@JoinColumn(name = "myynti_id")
-	private Myynti myynti_id;
+	private Myynti myynti;
 
 	public Lippu() {}
 	
-	public Lippu(Long id, String lippu_id, Lipputyyppi tyyppi_id, Myynti myynti_id) {
+	public Lippu(String lippu_id, Lipputyyppi tyyppi, Myynti myynti) {
 		super();
-		this.id = id;
+		
 		this.lippu_id = lippu_id;
-		this.tyyppi_id = tyyppi_id;
-		this.myynti_id = myynti_id;
+		this.tyyppi = tyyppi;
+		this.myynti = myynti;
 	}
 
 	public Long getId() {
@@ -48,20 +48,20 @@ public class Lippu {
 		this.lippu_id = lippu_id;
 	}
 
-	public Lipputyyppi getTyyppi_id() {
-		return tyyppi_id;
+	public Lipputyyppi getTyyppi() {
+		return tyyppi;
 	}
 
-	public void setTyyppi_id(Lipputyyppi tyyppi_id) {
-		this.tyyppi_id = tyyppi_id;
+	public void setTyyppi(Lipputyyppi tyyppi) {
+		this.tyyppi = tyyppi;
 	}
 
-	public Myynti getMyynti_id() {
-		return myynti_id;
+	public Myynti getMyynti() {
+		return myynti;
 	}
 
-	public void setMyynti_id(Myynti myynti_id) {
-		this.myynti_id = myynti_id;
+	public void setMyynti(Myynti myynti) {
+		this.myynti = myynti;
 	}
 
 	@Override

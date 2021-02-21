@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 public class Lippu {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private long id;
 	private String lippu_id;
 	
 	@ManyToOne

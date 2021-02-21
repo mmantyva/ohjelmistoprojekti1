@@ -1,4 +1,4 @@
-package src.main.java.swd4ta022.ticketguru.domain;
+package swd4ta022.ticketguru.domain;
 
 import java.util.List;
 

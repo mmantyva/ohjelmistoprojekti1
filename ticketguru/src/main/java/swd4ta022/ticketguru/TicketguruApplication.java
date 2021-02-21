@@ -11,7 +11,9 @@ import swd4ta022.ticketguru.TicketguruApplication;
 import swd4ta022.ticketguru.domain.LippuRepository;
 import swd4ta022.ticketguru.domain.LipputyyppiRepository;
 import swd4ta022.ticketguru.domain.MyyntiRepository;
+import swd4ta022.ticketguru.domain.Paikka;
 import swd4ta022.ticketguru.domain.PaikkaRepository;
+import swd4ta022.ticketguru.domain.Tapahtuma;
 import swd4ta022.ticketguru.domain.TapahtumaRepository;
 
 
@@ -23,6 +25,19 @@ public class TicketguruApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TicketguruApplication.class, args);
 	}
-	
+	 @Bean
+	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository) {
+		 return (args)->{
+			 Paikka paikka1 = new Paikka("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
+			 Paikka paikka2 = new Paikka("Finlandiatalo", "Mansku", "00100", "Helsinki");
+			 prepository.save(paikka1);
+			 prepository.save(paikka2);
+			 
+			 Tapahtuma tapahtuma1 = new Tapahtuma("Iso D", "klo. 19", "Danny", "Kuvaus1", 2000, prepository.findByPnimi("Tavastia").get(0));
+			 Tapahtuma tapahtuma2 = new Tapahtuma("Konsertti", "klo. 21", "Armi", "Kuvaus2", 2000, prepository.findByPnimi("Finlandiatalo").get(0));
+			 trepository.save(tapahtuma1);
+			 trepository.save(tapahtuma2);
+		 };
+	 }
 	
 }

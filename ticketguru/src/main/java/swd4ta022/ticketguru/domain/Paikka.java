@@ -13,16 +13,16 @@ import javax.persistence.OneToMany;
 public class Paikka {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long paikka_id;
-	private String paikka_nimi, katuosoite, postinumero, kaupunki;
+	private long paikkaid;
+	private String pnimi, katuosoite, postinumero, kaupunki;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="paikka")
 	private List<Tapahtuma> tapahtumat;
 		
-	public Paikka(long paikka_id, String paikka_nimi, String katuosoite, String postinumero, String kaupunki) {
+	public Paikka(String paikka_nimi, String katuosoite, String postinumero, String kaupunki) {
 		super();
-		this.paikka_id = paikka_id;
-		this.paikka_nimi = paikka_nimi;
+		
+		this.pnimi = paikka_nimi;
 		this.katuosoite = katuosoite;
 		this.postinumero = postinumero;
 		this.kaupunki = kaupunki;
@@ -33,17 +33,17 @@ public class Paikka {
 		// TODO Auto-generated constructor stub
 	}
 
-	public long getPaikka_id() {
-		return paikka_id;
+	public long getPaikkaid() {
+		return paikkaid;
 	}
-	public void setPaikka_id(long paikka_id) {
-		this.paikka_id = paikka_id;
+	public void setPaikkaid(long paikkaid) {
+		this.paikkaid = paikkaid;
 	}
 	public String getPaikka_nimi() {
-		return paikka_nimi;
+		return pnimi;
 	}
-	public void setPaikka_nimi(String paikka_nimi) {
-		this.paikka_nimi = paikka_nimi;
+	public void setPnimi(String pnimi) {
+		this.pnimi = pnimi;
 	}
 	public String getKatuosoite() {
 		return katuosoite;

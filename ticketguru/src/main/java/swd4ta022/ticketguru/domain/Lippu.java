@@ -12,7 +12,7 @@ public class Lippu {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	private String lippu_id;
+	private String lippuid;
 	
 	@ManyToOne
 	@JoinColumn(name = "tyyppi_id")
@@ -24,10 +24,10 @@ public class Lippu {
 
 	public Lippu() {}
 	
-	public Lippu(String lippu_id, Lipputyyppi tyyppi, Myynti myynti) {
+	public Lippu(String lippuid, Lipputyyppi tyyppi, Myynti myynti) {
 		super();
 		
-		this.lippu_id = lippu_id;
+		this.lippuid = lippuid;
 		this.tyyppi = tyyppi;
 		this.myynti = myynti;
 	}
@@ -41,11 +41,11 @@ public class Lippu {
 	}
 
 	public String getLippu_id() {
-		return lippu_id;
+		return lippuid;
 	}
 
-	public void setLippu_id(String lippu_id) {
-		this.lippu_id = lippu_id;
+	public void setLippu_id(String lippuid) {
+		this.lippuid = lippuid;
 	}
 
 	public Lipputyyppi getTyyppi() {
@@ -66,7 +66,7 @@ public class Lippu {
 
 	@Override
 	public String toString() {
-		return "Lippu [id=" + id + ", lippu_id=" + lippu_id + "]";
+		return "Lippu [id=" + id + ", lippu_id=" + lippuid + "]";
 	}
 	
 	

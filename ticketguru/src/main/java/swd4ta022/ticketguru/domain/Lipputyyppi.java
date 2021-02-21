@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 public class Lipputyyppi {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long tyyppi_id;
+	private Long tyyppiid;
 	private float hinta;
 	private String tyyppi_kuvaus;
 	
@@ -20,11 +20,11 @@ public class Lipputyyppi {
 	private Tapahtuma tapahtuma_id;
 
 	public Long getTyyppi_id() {
-		return tyyppi_id;
+		return tyyppiid;
 	}
 
-	public void setTyyppi_id(Long tyyppi_id) {
-		this.tyyppi_id = tyyppi_id;
+	public void setTyyppi_id(Long tyyppiid) {
+		this.tyyppiid = tyyppiid;
 	}
 
 	public float getHinta() {
@@ -51,9 +51,9 @@ public class Lipputyyppi {
 		this.tapahtuma_id = tapahtuma_id;
 	}
 
-	public Lipputyyppi(Long tyyppi_id, float hinta, String tyyppi_kuvaus, Tapahtuma tapahtuma_id) {
+	public Lipputyyppi(float hinta, String tyyppi_kuvaus, Tapahtuma tapahtuma_id) {
 		super();
-		this.tyyppi_id = tyyppi_id;
+	
 		this.hinta = hinta;
 		this.tyyppi_kuvaus = tyyppi_kuvaus;
 		this.tapahtuma_id = tapahtuma_id;

@@ -13,7 +13,7 @@ public class Tapahtuma {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private long tapahtuma_id;
-	private String tapahtuma_nimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
+	private String tnimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
 	private int kapasiteetti;
 	
 	@ManyToOne
@@ -33,11 +33,11 @@ public class Tapahtuma {
 	}
 
 	public String getTapahtuma_nimi() {
-		return tapahtuma_nimi;
+		return tnimi;
 	}
 
-	public void setTapahtuma_nimi(String tapahtuma_nimi) {
-		this.tapahtuma_nimi = tapahtuma_nimi;
+	public void setTapahtuma_nimi(String tnimi) {
+		this.tnimi = tnimi;
 	}
 
 	public String getTapahtuma_aika() {
@@ -80,11 +80,11 @@ public class Tapahtuma {
 		this.paikka = paikka;
 	}
 
-	public Tapahtuma(String tapahtuma_nimi, String tapahtuma_aika, String esiintyja,
+	public Tapahtuma(String tnimi, String tapahtuma_aika, String esiintyja,
 			String tapahtuma_kuvaus, int kapasiteetti, Paikka paikka) {
 		super();
 		
-		this.tapahtuma_nimi = tapahtuma_nimi;
+		this.tnimi = tnimi;
 		this.tapahtuma_aika = tapahtuma_aika;
 		this.esiintyja = esiintyja;
 		this.tapahtuma_kuvaus = tapahtuma_kuvaus;
@@ -94,7 +94,7 @@ public class Tapahtuma {
 
 	@Override
 	public String toString() {
-		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tapahtuma_nimi + ", tapahtuma_aika="
+		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tnimi + ", tapahtuma_aika="
 				+ tapahtuma_aika + ", esiintyja=" + esiintyja + ", tapahtuma_kuvaus=" + tapahtuma_kuvaus
 				+ ", kapasiteetti=" + kapasiteetti + ", paikka_id=" + paikka + "]";
 	}

@@ -11,6 +11,6 @@ Kehitysvaiheessa tiimin jäsenet ajavat projektia kukin omalla paikallisella pal
 * Näytä kaikki tapahtumat: GET `/tapahtumat`
 * Näytä yksittäinen tapahtuma: GET `/tapahtuma/{id}`
 * Tallenna uusi tapahtuma: POST `/tapahtumat`
-~~* Muokkaa osaa yksittäisestä tapahtumasta: PATCH `/tapahtumat/{id}`
-* Muokkaa kokonaista yksittäistä tapahtumaa: PUT `/tapahtumat/{id}`
-* Poista yksittäinen tapahtuma: DELETE `/tapahtumat/{id}`~~
+* ~~Muokkaa osaa yksittäisestä tapahtumasta: PATCH `/tapahtumat/{id}`~~
+* ~~Muokkaa kokonaista yksittäistä tapahtumaa: PUT `/tapahtumat/{id}`~~
+* ~~Poista yksittäinen tapahtuma: DELETE `/tapahtumat/{id}`~~

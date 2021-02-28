@@ -33,8 +33,8 @@ public class TicketguruApplication {
 			 prepository.save(paikka1);
 			 prepository.save(paikka2);
 			 
-			 Tapahtuma tapahtuma1 = new Tapahtuma("Iso D", "klo. 19", "Danny", "Kuvaus1", 2000, prepository.findByPnimi("Tavastia").get(0));
-			 Tapahtuma tapahtuma2 = new Tapahtuma("Konsertti", "klo. 21", "Armi", "Kuvaus2", 2000, prepository.findByPnimi("Finlandiatalo").get(0));
+			 Tapahtuma tapahtuma1 = new Tapahtuma("Iso D", "22.1.2021. klo. 19", "Danny", "Kuvaus1", 2000, prepository.findByPnimi("Tavastia").get(0));
+			 Tapahtuma tapahtuma2 = new Tapahtuma("Konsertti", "12.2.2021. klo. 21", "Armi", "Kuvaus2", 2000, prepository.findByPnimi("Finlandiatalo").get(0));
 			 trepository.save(tapahtuma1);
 			 trepository.save(tapahtuma2);
 		 };

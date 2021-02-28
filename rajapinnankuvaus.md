@@ -6,6 +6,7 @@ Tähän dokumenttiin kerätään projektin edetessä päivittyvää kuvausta sii
 Kehitysvaiheessa tiimin jäsenet ajavat projektia kukin omalla paikallisella palvelimellaan osoitteessa http://localhost:8080.
 
 ## Endpointit
+Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoimia. Käyttämäämme kovakoodattua testidataa lukuunottamatta H2-tietokantaan ei tallennu persistenttiä dataa.
 
 ### Tapahtuma-endpointit
 * Näytä kaikki tapahtumat: GET `/tapahtumat`

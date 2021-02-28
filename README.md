@@ -114,3 +114,8 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > lippu_id | int PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
 > tyyppi_id | int FK |  Lipputyypin id
 > myynti_id | int FK | Myyntitapahtuman id
+
+
+## Tekninen kuvaus
+
+Kehityksen alkuvaiheessa käytämme tietokannan rakentamisessa H2-kantaa. REST-rajapinnan kuvaukset ovat omissa dokumentaatioissaan.

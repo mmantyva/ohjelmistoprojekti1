@@ -33,7 +33,7 @@ public class TapahtumaController {
 	}
 	
 	// näytä yksittäinen tapahtuma:
-	@RequestMapping(value="/tapahtuma/{id}", method=RequestMethod.GET)
+	@RequestMapping(value="/tapahtumat/{id}", method=RequestMethod.GET)
 	public @ResponseBody Optional<Tapahtuma> getTapahtumaRest(@PathVariable("id") Long tapahtuma_id) {
 		return tapahtumarepository.findById(tapahtuma_id);
 	} 

@@ -11,8 +11,8 @@ import javax.persistence.ManyToOne;
 public class Lippu {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
-	private String lippuid;
+	private long lippuid;
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "tyyppi_id")
@@ -24,29 +24,23 @@ public class Lippu {
 
 	public Lippu() {}
 	
-	public Lippu(String lippuid, Lipputyyppi tyyppi, Myynti myynti) {
+	public Lippu(Lipputyyppi tyyppi, Myynti myynti) {
 		super();
 		
-		this.lippuid = lippuid;
+		
 		this.tyyppi = tyyppi;
 		this.myynti = myynti;
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getLippu_id() {
+	public Long getlippuId() {
 		return lippuid;
 	}
 
-	public void setLippu_id(String lippuid) {
+	public void setId(Long lippuid) {
 		this.lippuid = lippuid;
 	}
+
+
 
 	public Lipputyyppi getTyyppi() {
 		return tyyppi;
@@ -66,7 +60,7 @@ public class Lippu {
 
 	@Override
 	public String toString() {
-		return "Lippu [id=" + id + ", lippu_id=" + lippuid + "]";
+		return "Lippu [id=" + lippuid + "]";
 	}
 	
 	

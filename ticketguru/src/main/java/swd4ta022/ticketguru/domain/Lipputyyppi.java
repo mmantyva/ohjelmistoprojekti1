@@ -1,11 +1,17 @@
 package swd4ta022.ticketguru.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Lipputyyppi {
@@ -17,7 +23,11 @@ public class Lipputyyppi {
 	
 	@ManyToOne
 	@JoinColumn(name = "tapahtuma_id")
-	private Tapahtuma tapahtuma_id;
+	private Tapahtuma tapahtuma;
+	
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="tyyppi")
+	@JsonBackReference
+	private List<Lippu> liput;
 
 	public Long getTyyppi_id() {
 		return tyyppiid;
@@ -43,20 +53,20 @@ public class Lipputyyppi {
 		this.tyyppi_kuvaus = tyyppi_kuvaus;
 	}
 
-	public Tapahtuma getTapahtuma_id() {
-		return tapahtuma_id;
+	public Tapahtuma getTapahtuma() {
+		return tapahtuma;
 	}
 
-	public void setTapahtuma_id(Tapahtuma tapahtuma_id) {
-		this.tapahtuma_id = tapahtuma_id;
+	public void setTapahtuma(Tapahtuma tapahtuma) {
+		this.tapahtuma = tapahtuma;
 	}
 
-	public Lipputyyppi(float hinta, String tyyppi_kuvaus, Tapahtuma tapahtuma_id) {
+	public Lipputyyppi(float hinta, String tyyppi_kuvaus, Tapahtuma tapahtuma) {
 		super();
 	
 		this.hinta = hinta;
 		this.tyyppi_kuvaus = tyyppi_kuvaus;
-		this.tapahtuma_id = tapahtuma_id;
+		this.tapahtuma = tapahtuma;
 	}
 
 	public Lipputyyppi() {

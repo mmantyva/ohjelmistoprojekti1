@@ -1,11 +1,18 @@
 package swd4ta022.ticketguru.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 @Entity
 public class Tapahtuma {
@@ -13,12 +20,16 @@ public class Tapahtuma {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private long tapahtuma_id;
-	private String tapahtuma_nimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
+	private String tnimi, tapahtuma_aika, esiintyja, tapahtuma_kuvaus;
 	private int kapasiteetti;
 	
 	@ManyToOne
 	@JoinColumn(name="paikka_id")
-	private Paikka paikka_id;
+	private Paikka paikka;
+	
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="tapahtuma")
+	@JsonBackReference
+	private List<Lipputyyppi> lipputyypit;
 	
 	public Tapahtuma() {
 		super();
@@ -33,11 +44,11 @@ public class Tapahtuma {
 	}
 
 	public String getTapahtuma_nimi() {
-		return tapahtuma_nimi;
+		return tnimi;
 	}
 
-	public void setTapahtuma_nimi(String tapahtuma_nimi) {
-		this.tapahtuma_nimi = tapahtuma_nimi;
+	public void setTapahtuma_nimi(String tnimi) {
+		this.tnimi = tnimi;
 	}
 
 	public String getTapahtuma_aika() {
@@ -72,31 +83,31 @@ public class Tapahtuma {
 		this.kapasiteetti = kapasiteetti;
 	}
 
-	public Paikka getPaikka_id() {
-		return paikka_id;
+	public Paikka getPaikka() {
+		return paikka;
 	}
 
-	public void setPaikka_id(Paikka paikka_id) {
-		this.paikka_id = paikka_id;
+	public void setPaikka(Paikka paikka) {
+		this.paikka = paikka;
 	}
 
-	public Tapahtuma(long tapahtuma_id, String tapahtuma_nimi, String tapahtuma_aika, String esiintyja,
-			String tapahtuma_kuvaus, int kapasiteetti, Paikka paikka_id) {
+	public Tapahtuma(String tnimi, String tapahtuma_aika, String esiintyja,
+			String tapahtuma_kuvaus, int kapasiteetti, Paikka paikka) {
 		super();
-		this.tapahtuma_id = tapahtuma_id;
-		this.tapahtuma_nimi = tapahtuma_nimi;
+		
+		this.tnimi = tnimi;
 		this.tapahtuma_aika = tapahtuma_aika;
 		this.esiintyja = esiintyja;
 		this.tapahtuma_kuvaus = tapahtuma_kuvaus;
 		this.kapasiteetti = kapasiteetti;
-		this.paikka_id = paikka_id;
+		this.paikka = paikka;
 	}
 
 	@Override
 	public String toString() {
-		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tapahtuma_nimi + ", tapahtuma_aika="
+		return "Tapahtuma [tapahtuma_id=" + tapahtuma_id + ", tapahtuma_nimi=" + tnimi + ", tapahtuma_aika="
 				+ tapahtuma_aika + ", esiintyja=" + esiintyja + ", tapahtuma_kuvaus=" + tapahtuma_kuvaus
-				+ ", kapasiteetti=" + kapasiteetti + ", paikka_id=" + paikka_id + "]";
+				+ ", kapasiteetti=" + kapasiteetti + ", paikka_id=" + paikka + "]";
 	}
 
 	

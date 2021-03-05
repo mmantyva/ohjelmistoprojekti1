@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface TapahtumaRepository extends CrudRepository<Tapahtuma, Long> {
 
-	List<Tapahtuma> findByName(String tapahtuma_nimi);
+	List<Tapahtuma> findByTnimi(String tnimi);
 }

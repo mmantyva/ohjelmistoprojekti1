@@ -1,11 +1,16 @@
 package swd4ta022.ticketguru.web;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import swd4ta022.ticketguru.domain.Tapahtuma;
 import swd4ta022.ticketguru.domain.TapahtumaRepository;
@@ -15,8 +20,33 @@ import swd4ta022.ticketguru.domain.TapahtumaRepository;
 public class TapahtumaController {
 	
 	@Autowired 
-	private TapahtumaRepository tapahtumarepository; 
+	private TapahtumaRepository tapahtumarepository; 	
+	
+	// REST-metodit:
+	
+	// /tapahtumat on custom endpoint (ei siis autogeneroitu)!
 
+	//  näytä tapahtumat:
+	@RequestMapping(value="/tapahtumat", method=RequestMethod.GET)
+	public @ResponseBody List<Tapahtuma> tapahtumatRest() {
+		return (List<Tapahtuma>) tapahtumarepository.findAll();
+	}
+	
+	// näytä yksittäinen tapahtuma:
+	@RequestMapping(value="/tapahtumat/{id}", method=RequestMethod.GET)
+	public @ResponseBody Optional<Tapahtuma> getTapahtumaRest(@PathVariable("id") Long tapahtuma_id) {
+		return tapahtumarepository.findById(tapahtuma_id);
+	} 
+	
+	// tallenna uusi tapahtuma:
+    @RequestMapping(value="/tapahtumat", method=RequestMethod.POST)
+    public @ResponseBody Tapahtuma saveTapahtumaRest(@RequestBody Tapahtuma tapahtuma) {	
+    	return tapahtumarepository.save(tapahtuma);
+    }
+	
+	
+	// MUUT CONTROLLERIN METODIT: 
+	
 	// näytä tapahtumat
 	@RequestMapping(value = {"/", "/tapahtumalista"})
     public String tapahtumaList(Model model) {	

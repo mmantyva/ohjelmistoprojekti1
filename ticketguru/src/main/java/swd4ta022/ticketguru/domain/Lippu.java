@@ -11,62 +11,56 @@ import javax.persistence.ManyToOne;
 public class Lippu {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
-	private String lippu_id;
+	private long lippuid;
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "tyyppi_id")
-	private Lipputyyppi tyyppi_id;
+	private Lipputyyppi tyyppi;
 	
 	@ManyToOne
 	@JoinColumn(name = "myynti_id")
-	private Myynti myynti_id;
+	private Myynti myynti;
 
 	public Lippu() {}
 	
-	public Lippu(Long id, String lippu_id, Lipputyyppi tyyppi_id, Myynti myynti_id) {
+	public Lippu(Lipputyyppi tyyppi, Myynti myynti) {
 		super();
-		this.id = id;
-		this.lippu_id = lippu_id;
-		this.tyyppi_id = tyyppi_id;
-		this.myynti_id = myynti_id;
+		
+		
+		this.tyyppi = tyyppi;
+		this.myynti = myynti;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getlippuId() {
+		return lippuid;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(Long lippuid) {
+		this.lippuid = lippuid;
 	}
 
-	public String getLippu_id() {
-		return lippu_id;
+
+
+	public Lipputyyppi getTyyppi() {
+		return tyyppi;
 	}
 
-	public void setLippu_id(String lippu_id) {
-		this.lippu_id = lippu_id;
+	public void setTyyppi(Lipputyyppi tyyppi) {
+		this.tyyppi = tyyppi;
 	}
 
-	public Lipputyyppi getTyyppi_id() {
-		return tyyppi_id;
+	public Myynti getMyynti() {
+		return myynti;
 	}
 
-	public void setTyyppi_id(Lipputyyppi tyyppi_id) {
-		this.tyyppi_id = tyyppi_id;
-	}
-
-	public Myynti getMyynti_id() {
-		return myynti_id;
-	}
-
-	public void setMyynti_id(Myynti myynti_id) {
-		this.myynti_id = myynti_id;
+	public void setMyynti(Myynti myynti) {
+		this.myynti = myynti;
 	}
 
 	@Override
 	public String toString() {
-		return "Lippu [id=" + id + ", lippu_id=" + lippu_id + "]";
+		return "Lippu [id=" + lippuid + "]";
 	}
 	
 	

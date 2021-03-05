@@ -71,8 +71,9 @@ public class Lipputyyppi {
 
 	public Lipputyyppi() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
+	
 	
 	
 	

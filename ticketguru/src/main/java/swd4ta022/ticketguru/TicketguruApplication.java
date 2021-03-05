@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 
 import swd4ta022.ticketguru.TicketguruApplication;
 import swd4ta022.ticketguru.domain.LippuRepository;
+import swd4ta022.ticketguru.domain.Lipputyyppi;
 import swd4ta022.ticketguru.domain.LipputyyppiRepository;
 import swd4ta022.ticketguru.domain.MyyntiRepository;
 import swd4ta022.ticketguru.domain.Paikka;
@@ -26,7 +27,7 @@ public class TicketguruApplication {
 		SpringApplication.run(TicketguruApplication.class, args);
 	}
 	 @Bean
-	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository) {
+	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository, LipputyyppiRepository lprepository) {
 		 return (args)->{
 			 Paikka paikka1 = new Paikka("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
 			 Paikka paikka2 = new Paikka("Finlandiatalo", "Mansku", "00100", "Helsinki");
@@ -37,6 +38,11 @@ public class TicketguruApplication {
 			 Tapahtuma tapahtuma2 = new Tapahtuma("Konsertti", "12.2.2021. klo. 21", "Armi", "Kuvaus2", 2000, prepository.findByPnimi("Finlandiatalo").get(0));
 			 trepository.save(tapahtuma1);
 			 trepository.save(tapahtuma2);
+			 
+			 Lipputyyppi lipputyyppi1 = new Lipputyyppi(20, "Lapsi", trepository.findByTnimi("Iso D").get(0));
+			 Lipputyyppi lipputyyppi2 = new Lipputyyppi(40, "Aikuinen", trepository.findByTnimi("Iso D").get(0));
+			 lprepository.save(lipputyyppi1);
+			 lprepository.save(lipputyyppi2);
 		 };
 	 }
 	

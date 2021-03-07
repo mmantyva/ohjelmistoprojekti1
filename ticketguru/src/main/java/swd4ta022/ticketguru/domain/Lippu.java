@@ -13,6 +13,9 @@ public class Lippu {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long lippuid;
 	
+	@ManyToOne
+	@JoinColumn(name = "tapahtuma_id")
+	private Tapahtuma tapahtuma;
 	
 	@ManyToOne
 	@JoinColumn(name = "tyyppi_id")
@@ -24,23 +27,29 @@ public class Lippu {
 
 	public Lippu() {}
 	
-	public Lippu(Lipputyyppi tyyppi, Myynti myynti) {
+	public Lippu(Tapahtuma tapahtuma, Lipputyyppi tyyppi, Myynti myynti) {
 		super();
-		
-		
+		this.tapahtuma = tapahtuma;
 		this.tyyppi = tyyppi;
 		this.myynti = myynti;
 	}
 
-	public Long getlippuId() {
+
+	public long getLippuid() {
 		return lippuid;
 	}
 
-	public void setId(Long lippuid) {
+	public void setLippu_id(long lippuid) {
 		this.lippuid = lippuid;
 	}
 
+	public Tapahtuma getTapahtuma() {
+		return tapahtuma;
+	}
 
+	public void setTapahtuma(Tapahtuma tapahtuma) {
+		this.tapahtuma = tapahtuma;
+	}
 
 	public Lipputyyppi getTyyppi() {
 		return tyyppi;

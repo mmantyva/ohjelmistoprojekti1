@@ -29,7 +29,7 @@ public class Tapahtuma {
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="tapahtuma")
 	@JsonBackReference
-	private List<Lipputyyppi> lipputyypit;
+	private List<Lippu> liput;
 	
 	public Tapahtuma() {
 		super();

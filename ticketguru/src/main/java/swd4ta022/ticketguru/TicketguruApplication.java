@@ -8,9 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import swd4ta022.ticketguru.TicketguruApplication;
+import swd4ta022.ticketguru.domain.Lippu;
 import swd4ta022.ticketguru.domain.LippuRepository;
 import swd4ta022.ticketguru.domain.Lipputyyppi;
 import swd4ta022.ticketguru.domain.LipputyyppiRepository;
+import swd4ta022.ticketguru.domain.Myynti;
 import swd4ta022.ticketguru.domain.MyyntiRepository;
 import swd4ta022.ticketguru.domain.Paikka;
 import swd4ta022.ticketguru.domain.PaikkaRepository;
@@ -27,7 +29,7 @@ public class TicketguruApplication {
 		SpringApplication.run(TicketguruApplication.class, args);
 	}
 	 @Bean
-	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository, LipputyyppiRepository ltrepository) {
+	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository, LipputyyppiRepository ltrepository, MyyntiRepository mrepository, LippuRepository lrepository) {
 		 return (args)->{
 			 Paikka paikka1 = new Paikka("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
 			 Paikka paikka2 = new Paikka("Finlandiatalo", "Mansku", "00100", "Helsinki");
@@ -41,8 +43,24 @@ public class TicketguruApplication {
 			 
 			 Lipputyyppi lipputyyppi1 = new Lipputyyppi(20, "Lapsi", trepository.findByTnimi("Iso D").get(0));
 			 Lipputyyppi lipputyyppi2 = new Lipputyyppi(40, "Aikuinen", trepository.findByTnimi("Iso D").get(0));
+			 Lipputyyppi lipputyyppi3 = new Lipputyyppi(15, "Opiskelija", trepository.findByTnimi("Konsertti").get(0));
 			 ltrepository.save(lipputyyppi1);
 			 ltrepository.save(lipputyyppi2);
+			 ltrepository.save(lipputyyppi3);
+			 
+				
+				
+			 // lippuja ei saa kuollakseenkaan toimimaan, joku tuolla myyntirepositoryssa nikottelee vastaan ihan hulluna.
+			 // mikään ei käynnisty, jos yritän tallentaa tähän uusia lippuja :(
+				 
+			 
+			 Myynti myynti1 = new Myynti(1, "2021-01-01"); 
+			 Myynti myynti2 = new Myynti(2, "2021-02-02");
+			 Myynti myynti3 = new Myynti(3, "2021-03-03");
+			 mrepository.save(myynti1);
+			 mrepository.save(myynti2);
+			 mrepository.save(myynti3);
+
 		 };
 	 }
 	

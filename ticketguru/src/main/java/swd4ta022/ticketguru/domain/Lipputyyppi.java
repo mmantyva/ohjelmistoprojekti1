@@ -1,6 +1,7 @@
 package swd4ta022.ticketguru.domain;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -27,6 +28,7 @@ public class Lipputyyppi {
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="tyyppi")
 	@JsonBackReference
+	//Set<Lippu> liput;
 	private List<Lippu> liput;
 
 	public Long getTyyppi_id() {

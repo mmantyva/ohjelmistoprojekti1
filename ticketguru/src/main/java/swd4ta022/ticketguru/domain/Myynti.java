@@ -9,12 +9,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+
 @Entity
 public class Myynti {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long myynti_id;
 	private String myynti_aika; //en jaksanut nyt t�ss� vaiheessa mietti� tietotyyppej� niin laitoin stringin paikkaa pit�m��n :D
+
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="myynti")
 	private List<Lippu> liput;
@@ -26,8 +28,6 @@ public class Myynti {
 	}
 			
 	public Myynti() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	public long getMyynti_id() {
@@ -46,10 +46,10 @@ public class Myynti {
 	public List<Lippu> getLiput() {
 		return liput;
 	}
-
+	  
 	public void setLiput(List<Lippu> liput) {
-		this.liput = liput;
+		  this.liput = liput;
 	}
-	
+	 
 	
 }

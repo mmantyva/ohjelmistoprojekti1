@@ -13,9 +13,8 @@ public class Lippu {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long lippuid;
 	
-	
 	@ManyToOne
-	@JoinColumn(name = "tyyppi_id")
+	@JoinColumn(name = "tyyppiid")
 	private Lipputyyppi tyyppi;
 	
 	@ManyToOne
@@ -26,8 +25,6 @@ public class Lippu {
 	
 	public Lippu(Lipputyyppi tyyppi, Myynti myynti) {
 		super();
-		
-		
 		this.tyyppi = tyyppi;
 		this.myynti = myynti;
 	}

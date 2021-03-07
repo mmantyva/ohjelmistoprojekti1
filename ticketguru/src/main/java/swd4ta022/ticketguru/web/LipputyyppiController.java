@@ -18,23 +18,23 @@ import swd4ta022.ticketguru.domain.LipputyyppiRepository;
 public class LipputyyppiController {
 	
 	@Autowired
-	private LipputyyppiRepository lipputyyppirepository;
+	private LipputyyppiRepository ltrepository;
 	
 	//näytä lipputyypit
 	@RequestMapping(value="/lipputyypit", method=RequestMethod.GET)
 	public @ResponseBody List<Lipputyyppi> lipputyypitRest() {
-		return (List<Lipputyyppi>) lipputyyppirepository.findAll();
+		return (List<Lipputyyppi>) ltrepository.findAll();
 	}
 	
 	// näytä yksittäinen lipputyyppi:
 	@RequestMapping(value="/lipputyypit/{id}", method=RequestMethod.GET)
 	public @ResponseBody Optional<Lipputyyppi> getLipputyyppiRest(@PathVariable("id") Long tyyppiid) {
-		return lipputyyppirepository.findById(tyyppiid);
+		return ltrepository.findById(tyyppiid);
 	} 
 	
 	// tallenna uusi lipputyyppi:
     @RequestMapping(value="/lipputyypit", method=RequestMethod.POST)
     public @ResponseBody Lipputyyppi saveLipputyyppiRest(@RequestBody Lipputyyppi lipputyyppi) {	
-    	return lipputyyppirepository.save(lipputyyppi);
+    	return ltrepository.save(lipputyyppi);
     }
 }

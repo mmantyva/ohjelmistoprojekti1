@@ -27,7 +27,7 @@ public class TicketguruApplication {
 		SpringApplication.run(TicketguruApplication.class, args);
 	}
 	 @Bean
-	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository, LipputyyppiRepository lprepository) {
+	 public CommandLineRunner demo(TapahtumaRepository trepository, PaikkaRepository prepository, LipputyyppiRepository ltrepository) {
 		 return (args)->{
 			 Paikka paikka1 = new Paikka("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
 			 Paikka paikka2 = new Paikka("Finlandiatalo", "Mansku", "00100", "Helsinki");
@@ -41,8 +41,8 @@ public class TicketguruApplication {
 			 
 			 Lipputyyppi lipputyyppi1 = new Lipputyyppi(20, "Lapsi", trepository.findByTnimi("Iso D").get(0));
 			 Lipputyyppi lipputyyppi2 = new Lipputyyppi(40, "Aikuinen", trepository.findByTnimi("Iso D").get(0));
-			 lprepository.save(lipputyyppi1);
-			 lprepository.save(lipputyyppi2);
+			 ltrepository.save(lipputyyppi1);
+			 ltrepository.save(lipputyyppi2);
 		 };
 	 }
 	

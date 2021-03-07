@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface LippuRepository extends CrudRepository<Lippu, Long> {
 	
-	List<Lippu> findByLippuid(String Lippuid);
+	List<Lippu> findByLippuid(String lippuid);
 	
 
 }

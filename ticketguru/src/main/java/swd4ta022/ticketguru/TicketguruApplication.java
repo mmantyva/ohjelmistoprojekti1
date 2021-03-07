@@ -41,25 +41,25 @@ public class TicketguruApplication {
 			 trepository.save(tapahtuma1);
 			 trepository.save(tapahtuma2);
 			 
-			 Lipputyyppi lipputyyppi1 = new Lipputyyppi(20, "Lapsi", trepository.findByTnimi("Iso D").get(0));
-			 Lipputyyppi lipputyyppi2 = new Lipputyyppi(40, "Aikuinen", trepository.findByTnimi("Iso D").get(0));
-			 Lipputyyppi lipputyyppi3 = new Lipputyyppi(15, "Opiskelija", trepository.findByTnimi("Konsertti").get(0));
+				
+			 Lipputyyppi lipputyyppi1 = new Lipputyyppi(10.0, "Lapsi");
+			 Lipputyyppi lipputyyppi2 = new Lipputyyppi(40.0, "Aikuinen");
+			 Lipputyyppi lipputyyppi3 = new Lipputyyppi(20.0, "Opiskelija");
 			 ltrepository.save(lipputyyppi1);
 			 ltrepository.save(lipputyyppi2);
 			 ltrepository.save(lipputyyppi3);
 			 
-				
-				
-			 // lippuja ei saa kuollakseenkaan toimimaan, joku tuolla myyntirepositoryssa nikottelee vastaan ihan hulluna.
-			 // mikään ei käynnisty, jos yritän tallentaa tähän uusia lippuja :(
-				 
-			 
-			 Myynti myynti1 = new Myynti(1, "2021-01-01"); 
-			 Myynti myynti2 = new Myynti(2, "2021-02-02");
-			 Myynti myynti3 = new Myynti(3, "2021-03-03");
+			 // tapahtuma, tyyppi, myynti
+			 Lippu lippu1 = new Lippu(trepository.findByTnimi("Iso D").get(0), ltrepository.findByKuvaus("Lapsi").get(0), null);
+			 Lippu lippu2 = new Lippu();
+			 Lippu lippu3 = new Lippu();
+			 lrepository.save(lippu1);
+			 lrepository.save(lippu2);
+			 lrepository.save(lippu3);
+			  
+			 Myynti myynti1 = new Myynti(1, "2021-03-03");
 			 mrepository.save(myynti1);
-			 mrepository.save(myynti2);
-			 mrepository.save(myynti3);
+			 
 
 		 };
 	 }

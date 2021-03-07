@@ -14,27 +14,27 @@ import javax.persistence.OneToMany;
 public class Myynti {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long myynti_id;
+	private long myyntiid;
 	private String myynti_aika; //en jaksanut nyt t�ss� vaiheessa mietti� tietotyyppej� niin laitoin stringin paikkaa pit�m��n :D
 
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="myynti")
 	private List<Lippu> liput;
 	
-	public Myynti(long myynti_id, String myynti_aika) {
+	public Myynti(long myyntiid, String myynti_aika) {
 		super();
-		this.myynti_id = myynti_id;
+		this.myyntiid = myyntiid;
 		this.myynti_aika = myynti_aika;
 	}
 			
 	public Myynti() {
 	}
 	
-	public long getMyynti_id() {
-		return myynti_id;
+	public long getMyyntiid() {
+		return myyntiid;
 	}
-	public void setMyynti_id(long myynti_id) {
-		this.myynti_id = myynti_id;
+	public void setMyynti_id(long myyntiid) {
+		this.myyntiid = myyntiid;
 	}
 	public String getMyynti_aika() {
 		return myynti_aika;

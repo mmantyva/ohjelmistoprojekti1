@@ -28,8 +28,8 @@ public class LippuController {
 	
 	// näytä yksittäinen lippu:
 	@RequestMapping(value="/liput/{id}", method=RequestMethod.GET)
-	public @ResponseBody Optional<Lippu> getLippuRest(@PathVariable("id") Long lippuid) {
-		return lrepository.findById(lippuid);
+	public @ResponseBody Optional<Lippu> getLippuRest(@PathVariable("id") Long lippu_id) {
+		return lrepository.findById(lippu_id);
 	} 
 	
 	// tallenna uusi lipputyyppi:

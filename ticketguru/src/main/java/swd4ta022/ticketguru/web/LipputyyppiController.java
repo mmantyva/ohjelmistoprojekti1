@@ -28,8 +28,8 @@ public class LipputyyppiController {
 	
 	// näytä yksittäinen lipputyyppi:
 	@RequestMapping(value="/lipputyypit/{id}", method=RequestMethod.GET)
-	public @ResponseBody Optional<Lipputyyppi> getLipputyyppiRest(@PathVariable("id") Long tyyppiid) {
-		return ltrepository.findById(tyyppiid);
+	public @ResponseBody Optional<Lipputyyppi> getLipputyyppiRest(@PathVariable("id") Long tyyppi_id) {
+		return ltrepository.findById(tyyppi_id);
 	} 
 	
 	// tallenna uusi lipputyyppi:

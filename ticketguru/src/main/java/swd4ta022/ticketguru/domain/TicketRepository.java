@@ -4,7 +4,10 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface TapahtumaRepository extends CrudRepository<Tapahtuma, Long> {
 
-	List<Tapahtuma> findByTnimi(String tnimi);
+public interface TicketRepository extends CrudRepository<Ticket, Long> {
+	
+	List<Ticket> findByTicketid(Long ticketid);
+	
+
 }

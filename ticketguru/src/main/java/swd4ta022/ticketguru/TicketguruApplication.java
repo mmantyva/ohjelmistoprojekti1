@@ -54,7 +54,7 @@ public class TicketguruApplication {
 			 
 			 // event, type, transaction
 			 Ticket ticket1 = new Ticket();
-			 ticketrepository.save(ticket1);
+			 ticketrepository.save(ticket1); 
 			 
 			 Transaction transaction1 = new Transaction("2021-03-03");
 			 trrepository.save(transaction1);

@@ -61,59 +61,59 @@ Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
 Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakemistossa:
 
-> ### _Tapahtumat_
-> _Tapahtumat-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä._
+> ### _Events_
+> _Events-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> tapahtuma_id | int PK | Tapahtuman id
-> tapahtuma_nimi | varchar(50) |  Tapahtuman nimi
-> esiintyja | varchar(50) | Tapahtumassa esiintyvä artisti, ryhmä tms
-> kapasiteetti | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
-> tapahtuma_aika | datetime | Tapahtuman ajankohta
-> paikka_id | int FK) | Paikan_id, jossa tapahtuma järjestetään
-> kuvaus | varchar(250) | Lyhyt kuvaus tapahtumasta
+> eventid | int PK | Tapahtuman id
+> eventname | varchar(50) |  Tapahtuman nimi
+> performer | varchar(50) | Tapahtumassa esiintyvä artisti, ryhmä tms
+> capacity | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
+> eventtime | datetime | Tapahtuman ajankohta
+> venueid | int FK) | Paikan id, jossa tapahtuma järjestetään
+> desc | varchar(250) | Lyhyt kuvaus tapahtumasta
 #
 
-> ### _Paikat_
->_Paikat-taulu sisältää tiedot tiloista, joissa tapahtumia voidaan järjestää._
+> ### _Venues_
+>_Venues-taulu sisältää tiedot tiloista, joissa tapahtumia voidaan järjestää._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> paikka_id | int PK | Tilan/paikan id
-> paikka_nimi | varchar(50) | Paikan nimi
-> katuosoite | varchar(50) | Kohteen katuosoite
-> postinumero | char(5) | Kohteen postinumero
-> kaupunki | varchar(20) | Kaupunki, jossa kohde sijaitsee
+> venueid | int PK | Tilan/paikan id
+> venuename | varchar(50) | Paikan nimi
+> address | varchar(50) | Kohteen katuosoite
+> postcode | char(5) | Kohteen postinumero
+> city | varchar(20) | Kaupunki, jossa kohde sijaitsee
 #
 
-> ### _Lipputyypit_
-> _Lipputyypit-taulussa on tiedot erilaisista lipputyypeistä, joita tapahtumaan myydään. Jokainen lipputyyppi kuuluu yhteen tapahtumaan._
+> ### _Types_
+> _Types-taulussa on tiedot erilaisista lipputyypeistä, joita tapahtumaan myydään. Jokainen lipputyyppi kuuluu yhteen tapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> tyyppi_id | int PK | Lipputyypin id
-> tapahtuma_id | int FK |  Tapahtuman id
-> hinta | float | Lipun hinta
-> tyyppi_kuvaus | varchar(50) | Lipputyypin kuvaus (esim. aikuinen)
+> typeid | int PK | Lipputyypin id
+> price | float | Lipun hinta
+> typename | varchar(50) | Lipputyypin kuvaus (esim. aikuinen)
 #
 
-> ### _Myyntitapahtumat_
-> _Myyntitapahtumat-taulussa on tiedot kaikista myyntitapahtumista. Yksi myyntitapahtuma voi sisältää useita lippuja, useisiin eri tapahtumiin._
+> ### _Transactions_
+> _Transactions-taulussa on tiedot kaikista myyntitapahtumista. Yksi myyntitapahtuma voi sisältää useita lippuja, useisiin eri tapahtumiin._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> myynti_id | int PK | Myyntitapahtuman id
-> myynti_aika | datetime |  Myyntitapahtuman ajankohta
+> trid | int PK | Myyntitapahtuman id
+> trtime | datetime |  Myyntitapahtuman ajankohta
 #
-> ### _Liput_
-> _Liput-taulussa on tiedot yksittäisistä myydyistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
+> ### _Tickets_
+> _Tickets-taulussa on tiedot yksittäisistä myydyistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> lippu_id | int PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
-> tyyppi_id | int FK |  Lipputyypin id
-> myynti_id | int FK | Myyntitapahtuman id
+> ticketid | int PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
+> typeid | int FK |  Lipputyypin id
+> trid | int FK | Myyntitapahtuman id
+> eventid | int FK | Tapahtuman id
 
 
 ## Tekninen kuvaus

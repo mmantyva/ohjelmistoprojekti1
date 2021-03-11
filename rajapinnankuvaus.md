@@ -9,15 +9,15 @@ Kehitysvaiheessa tiimin jäsenet ajavat projektia kukin omalla paikallisella pal
 Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoimia. Käyttämäämme kovakoodattua testidataa lukuunottamatta H2-tietokantaan ei tallennu persistenttiä dataa.
 
 ### Myyntitapahtuma-endpointit
-* Näytä kaikki myyntitapahtumat: GET `api/myyntis` tai `/myynnit`
-* Näytä yksittäinen myyntitapahtuma: GET `api/myyntis/{id}` tai `/myynnit/{id}`
-* Tallenna uusi tapahtuma: POST `api/myyntis` tai `/myynnit`
+* Näytä kaikki myyntitapahtumat: GET `api/transactions` tai `/transactions`
+* Näytä yksittäinen myyntitapahtuma: GET `api/transactions/{id}` tai `/transactions/{id}`
+* Tallenna uusi tapahtuma: POST `api/transactions` tai `/transactions`
 
 
 ### Tapahtuma-endpointit
-* Näytä kaikki tapahtumat: GET `/tapahtumat`
-* Näytä yksittäinen tapahtuma: GET `/tapahtumat/{id}`
-* Tallenna uusi tapahtuma: POST `/tapahtumat`
-* ~~Muokkaa osaa yksittäisestä tapahtumasta: PATCH `/tapahtumat/{id}`~~
-* ~~Muokkaa kokonaista yksittäistä tapahtumaa: PUT `/tapahtumat/{id}`~~
-* ~~Poista yksittäinen tapahtuma: DELETE `/tapahtumat/{id}`~~
+* Näytä kaikki tapahtumat: GET `/events`
+* Näytä yksittäinen tapahtuma: GET `/events/{id}`
+* Tallenna uusi tapahtuma: POST `/events`
+* ~~Muokkaa osaa yksittäisestä tapahtumasta: PATCH `/events/{id}`~~
+* ~~Muokkaa kokonaista yksittäistä tapahtumaa: PUT `/events/{id}`~~
+* ~~Poista yksittäinen tapahtuma: DELETE `/events/{id}`~~

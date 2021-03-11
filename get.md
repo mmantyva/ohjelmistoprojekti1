@@ -2,7 +2,7 @@
 
 ## Hae kaikkien tapahtumien tiedot 
 
-**URL** : `/tapahtumat`
+**URL** : `/events`
 
 **Method** : `GET`
 
@@ -14,7 +14,7 @@
 
 ## Hae yksittäisen tapahtuman tiedot
 
-**URL** : `/tapahtuma/{id}`
+**URL** : `/event/{id}`
 
 **Method** : `GET`
 
@@ -30,19 +30,19 @@ Tapahtumalle, jonka ID on 3 on tietokantaan tallennettu kaikki tapahtumaa koskev
 
 ```json
 {
-    "tapahtuma_id": 3,
-    "tapahtuma_aika": "22.1.2021. klo. 19",
-    "esiintyja": "Danny",
-    "tapahtuma_kuvaus": "Kuvaus1",
-    "kapasiteetti": 2000,
-    "paikka": {
-        "paikkaid": 1,
-        "katuosoite": "Urhokekkosenkatu",
-        "postinumero": "00100",
-        "kaupunki": "Helsinki",
-        "paikka_nimi": "Tavastia"
+    "eventid": 3,
+    "eventtime": "22.1.2021. klo. 19",
+    "performer": "Danny",
+    "desc": "Kuvaus1",
+    "capacity": 2000,
+    "venue": {
+        "venueid": 1,
+        "address": "Urhokekkosenkatu",
+        "postcode": "00100",
+        "city": "Helsinki",
+        "venuename": "Tavastia"
     },
-    "tapahtuma_nimi": "Iso D"
+    "eventname": "Iso D"
 }
 ```
 
@@ -50,13 +50,13 @@ Tapahtumalle, jonka ID on 5 on tietokantaan tallennettu ainoastaan esiintyjän n
 
 ```json
 {
-    "tapahtuma_id": 5,
-    "tapahtuma_aika": null,
-    "esiintyja": "Gaga",
-    "tapahtuma_kuvaus": null,
-    "kapasiteetti": 0,
-    "paikka": null,
-    "tapahtuma_nimi": null
+    "eventid": 5,
+    "eventtime": null,
+    "performer": "Gaga",
+    "desc": null,
+    "capacity": 0,
+    "venue": null,
+    "eventname": null
 }
 
 ```

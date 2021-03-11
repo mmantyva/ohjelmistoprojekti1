@@ -1,6 +1,6 @@
 # Luo uusi tapahtuma
 
-**URL** : `/tapahtumat`
+**URL** : `/events`
 
 **Method** : `POST`
 
@@ -12,7 +12,7 @@
 
 ## Hae yksittäisen tapahtuman tiedot
 
-**URL** : `/tapahtuma/{id}`
+**URL** : `/event/{id}`
 
 **Method** : `GET`
 
@@ -25,22 +25,22 @@
 ### Esimerkki lähetettävän pyynnön rungosta, mukana kaikki tapahtuman tiedot:
 
 ```json
-{"esiintyja": "Gaga", 
-"tapahtuma_aika":"27.2.2021. klo 18:30", 
-"tapahtuma_kuvaus": "Konsertti", 
-"tapahtuma_nimi": "Gagakonsertti", 
-"kapasiteetti": "150", 
-"paikka": {"paikkaid":2}}
+{"performer": "Gaga", 
+"eventtime":"27.2.2021. klo 18:30", 
+"desc": "Konsertti", 
+"eventname": "Gagakonsertti", 
+"capacity": "150", 
+"venue": {"venueid":2}}
 ```
 
-* Tapahtumalle luodaan TapahtumaID automaattisesti.
-* Paikkaa vastaava PaikkaID on löydyttävä tietokannasta.
+* Tapahtumalle luodaan EventID automaattisesti.
+* Paikkaa vastaava VenueID on löydyttävä tietokannasta.
 
 ### Esimerkki lähetettävän pyynnön rungosta, mukana ainoastaan esiintyjä ja tapahtuma-aika:
 
 ```json
-{"esiintyja": "Gaga", 
-"tapahtuma_aika":"27.2.2021. klo 18:30" 
+{"performer": "Gaga", 
+"eventtime":"27.2.2021. klo 18:30" 
 }
 ```
 

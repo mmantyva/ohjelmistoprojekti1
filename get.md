@@ -14,7 +14,7 @@
 
 ## Hae yksittäisen tapahtuman tiedot
 
-**URL** : `/event/{id}`
+**URL** : `/events/{id}`
 
 **Method** : `GET`
 

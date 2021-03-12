@@ -21,7 +21,7 @@ public class TransactionController {
 	private TransactionRepository trrepository;
 	
 	//näytä myyntitapahtumat
-	@RequestMapping(value="/transctions", method=RequestMethod.GET)
+	@RequestMapping(value="/transactions", method=RequestMethod.GET)
 	public @ResponseBody List<Transaction> trRest() {
 		return (List<Transaction>) trrepository.findAll();
 	}

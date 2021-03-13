@@ -20,19 +20,19 @@ public class Venue {
 	private long venueid;
 	
 	@NotBlank(message="Venue must have a name")
-	@Max(50)
+	//@Max(50)
 	private String venuename;
 	
 	@NotBlank(message="Venue must have an address")
-	@Max(50)
+	//@Max(50)
 	private String address;
 	
 	@NotBlank(message="Venue must have a postcode")
-	@Max(5)
+	//@Max(5)
 	private String postcode;
 	
 	@NotBlank(message="Venue must have a city")
-	@Max(20)
+	//@Max(20)
 	private String city;
 	
 	

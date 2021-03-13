@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -16,7 +18,9 @@ public class Type {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long typeid;
+	@NotBlank(message="Ticket type must have a name")
 	private String typename;
+	@Positive(message = "Price must be over positive")
 	private double price;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="type")

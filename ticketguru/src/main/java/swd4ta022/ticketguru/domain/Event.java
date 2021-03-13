@@ -25,17 +25,17 @@ public class Event {
 	private long eventid;
 	
 	@NotBlank(message="Event must have a name")
-	@Max(50)
+	//@Max(50)
 	private String eventname;
 	
 	@NotBlank(message="Event must have a time")
 	private String eventtime;
 	
 	@NotBlank(message="Event must have a performer")
-	@Max(50)
+	//@Max(50)
 	private String performer;
 	
-	@Max(250)
+	//@Max(250)
 	private String desc;
 	
 	@Positive(message = "Only positive numbers, please")

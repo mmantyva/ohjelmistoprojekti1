@@ -1,7 +1,5 @@
 package swd4ta022.ticketguru;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,7 +21,6 @@ import swd4ta022.ticketguru.domain.VenueRepository;
 
 @SpringBootApplication
 public class TicketguruApplication {
-	private static final Logger log = LoggerFactory.getLogger(TicketguruApplication.class);
 
 
 	public static void main(String[] args) {
@@ -40,7 +37,7 @@ public class TicketguruApplication {
 			 vrepository.save(venue2);
 			 vrepository.save(venue3);
 			 
-			 Event event1 = new Event("Iso D", "22.1.2021. klo. 19", "Danny", "Kuvaus1", 2000, vrepository.findByVenuename("Tavastia").get(0));
+			 Event event1 = new Event("Iso D", "11.11.2022", "Danny", "Kuvaus1", 2000, vrepository.findByVenuename("Tavastia").get(0));
 			 Event event2 = new Event("Konsertti", "22.1.2021. klo. 19", "Armi", "Kuvaus2", 2000, vrepository.findByVenuename("Finlandiatalo").get(0));
 			 erepository.save(event1);
 			 erepository.save(event2);

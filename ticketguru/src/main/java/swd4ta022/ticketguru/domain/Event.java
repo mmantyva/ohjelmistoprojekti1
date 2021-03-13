@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -20,7 +23,22 @@ public class Event {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private long eventid;
-	private String eventname, eventtime, performer, desc;
+	
+	@NotBlank(message="Event must have a name")
+	@Max(50)
+	private String eventname;
+	
+	@NotBlank(message="Event must have a time")
+	private String eventtime;
+	
+	@NotBlank(message="Event must have a performer")
+	@Max(50)
+	private String performer;
+	
+	@Max(250)
+	private String desc;
+	
+	@Positive(message = "Only positive numbers, please")
 	private int capacity;
 	
 	@ManyToOne

@@ -3,6 +3,8 @@ package swd4ta022.ticketguru.web;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,19 +29,19 @@ public class EventController {
 
 	//  näytä tapahtumat:
 	@RequestMapping(value="/events", method=RequestMethod.GET)
-	public @ResponseBody List<Event> eventsRest() {
+	public @Valid @ResponseBody List<Event> eventsRest() {
 		return (List<Event>) erepository.findAll();
 	}
 	
 	// näytä yksittäinen tapahtuma:
 	@RequestMapping(value="/events/{id}", method=RequestMethod.GET)
-	public @ResponseBody Optional<Event> getEventRest(@PathVariable("id") Long eventid) {
+	public @Valid @ResponseBody Optional<Event> getEventRest(@PathVariable("id") Long eventid) {
 		return erepository.findById(eventid);
 	} 
 	
 	// tallenna uusi tapahtuma:
     @RequestMapping(value="/events", method=RequestMethod.POST)
-    public @ResponseBody Event saveEventRest(@RequestBody Event event) {	
+    public @Valid @ResponseBody Event saveEventRest(@Valid @RequestBody Event event) {	
     	return erepository.save(event);
     }
 	

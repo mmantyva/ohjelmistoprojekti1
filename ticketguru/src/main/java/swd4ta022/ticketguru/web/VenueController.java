@@ -3,6 +3,8 @@ package swd4ta022.ticketguru.web;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,19 +25,19 @@ public class VenueController {
  
 	//  näytä paikat:
 	@RequestMapping(value="/venues", method=RequestMethod.GET)
-	public @ResponseBody List<Venue> venuesRest() {
+	public @Valid @ResponseBody List<Venue> venuesRest() {
 		return (List<Venue>) vrepository.findAll();
 	}
 	
 	// näytä yksittäinen paikka:
 	@RequestMapping(value="/venues/{id}", method=RequestMethod.GET)
-	public @ResponseBody Optional<Venue> getPaikkaRest(@PathVariable("id") Long venueid) {
+	public @Valid @ResponseBody Optional<Venue> getPaikkaRest(@PathVariable("id") Long venueid) {
 		return vrepository.findById(venueid);
 	} 
 	
 	// tallenna uusi paikka:
     @RequestMapping(value="/venues", method=RequestMethod.POST)
-    public @ResponseBody Venue saveVenueRest(@RequestBody Venue venue) {	
+    public @Valid @ResponseBody Venue saveVenueRest(@Valid @RequestBody Venue venue) {	
     	return vrepository.save(venue);
     }
 }

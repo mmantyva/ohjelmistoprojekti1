@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -16,7 +18,23 @@ public class Venue {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long venueid;
-	private String venuename, address, postcode, city;
+	
+	@NotBlank(message="Venue must have a name")
+	@Max(50)
+	private String venuename;
+	
+	@NotBlank(message="Venue must have an address")
+	@Max(50)
+	private String address;
+	
+	@NotBlank(message="Venue must have a postcode")
+	@Max(5)
+	private String postcode;
+	
+	@NotBlank(message="Venue must have a city")
+	@Max(20)
+	private String city;
+	
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="venue")
 	@JsonBackReference

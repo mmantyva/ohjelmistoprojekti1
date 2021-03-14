@@ -53,7 +53,7 @@ Alustava käyttötapauskaavio:
 Alustavat käyttöliittymän rautalankamallit on tallennettu [Moodleen](https://hhmoodle.haaga-helia.fi/pluginfile.php/2113426/mod_resource/content/1/TicketGuru%20UI.pdf).
 
 ## Tietokanta
-Järjestelmän tietokantarakenne koostuu neljästä tietokantataulusta: tapahtumista, siihen myytävistä erilaisista lipputyypeistä, myyntitapahtumista ja yksittäisistä lipuista.
+Järjestelmän tietokantarakenne koostuu viidestä tietokantataulusta: tapahtumapaikoista, tapahtumista, yksittäisistä lipuista, lipputyypeistä ja myyntitapahtumista.
 
 Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
@@ -67,11 +67,11 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
 > eventid | int PK | Tapahtuman id
+> venueid | int FK) | Paikan id, jossa tapahtuma järjestetään
 > eventname | varchar(50) |  Tapahtuman nimi
 > performer | varchar(50) | Tapahtumassa esiintyvä artisti, ryhmä tms
 > capacity | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
 > eventtime | datetime | Tapahtuman ajankohta
-> venueid | int FK) | Paikan id, jossa tapahtuma järjestetään
 > desc | varchar(250) | Lyhyt kuvaus tapahtumasta
 #
 

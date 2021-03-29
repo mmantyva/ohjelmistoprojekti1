@@ -15,6 +15,8 @@ import swd4ta022.ticketguru.domain.Transaction;
 import swd4ta022.ticketguru.domain.TransactionRepository;
 import swd4ta022.ticketguru.domain.Type;
 import swd4ta022.ticketguru.domain.TypeRepository;
+import swd4ta022.ticketguru.domain.User;
+import swd4ta022.ticketguru.domain.UserRepository;
 import swd4ta022.ticketguru.domain.Venue;
 import swd4ta022.ticketguru.domain.VenueRepository;
 
@@ -27,7 +29,7 @@ public class TicketguruApplication {
 		SpringApplication.run(TicketguruApplication.class, args);
 	}
 	 @Bean
-	 public CommandLineRunner demo(EventRepository erepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository) {
+	 public CommandLineRunner demo(EventRepository erepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository, UserRepository userrepository) {
 		 return (args)->{
 			 
 			 Venue venue1 = new Venue("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
@@ -55,6 +57,10 @@ public class TicketguruApplication {
 			 
 			 Transaction transaction1 = new Transaction("2021-03-03");
 			 trrepository.save(transaction1);
+			 
+			 //User
+			 User user = new User("Tuomas", "Martsa", "user", "user", "user");
+			 userrepository.save(user);
 
 		 };
 	 }

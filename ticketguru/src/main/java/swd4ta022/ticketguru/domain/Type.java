@@ -20,7 +20,7 @@ public class Type {
 	private Long typeid;
 	@NotBlank(message="Ticket type must have a name")
 	private String typename;
-	@Positive(message = "Price must be over positive")
+	@Positive(message = "Price must be positive")
 	private double price;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="type")

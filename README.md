@@ -66,13 +66,13 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> eventid | int PK | Tapahtuman id
-> venueid | int FK) | Paikan id, jossa tapahtuma järjestetään
-> eventname | varchar(50) |  Tapahtuman nimi
-> performer | varchar(50) | Tapahtumassa esiintyvä artisti, ryhmä tms
+> eventid | long PK | Tapahtuman id
+> venueid | long FK | Paikan id, jossa tapahtuma järjestetään
+> eventname | String |  Tapahtuman nimi
+> performer | String | Tapahtumassa esiintyvä artisti, ryhmä tms
 > capacity | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
 > eventtime | datetime | Tapahtuman ajankohta
-> desc | varchar(250) | Lyhyt kuvaus tapahtumasta
+> desc | String | Lyhyt kuvaus tapahtumasta
 #
 
 > ### _Venues_
@@ -80,11 +80,11 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> venueid | int PK | Tilan/paikan id
-> venuename | varchar(50) | Paikan nimi
-> address | varchar(50) | Kohteen katuosoite
-> postcode | char(5) | Kohteen postinumero
-> city | varchar(20) | Kaupunki, jossa kohde sijaitsee
+> venueid | long PK | Tilan/paikan id
+> venuename | String | Paikan nimi
+> address | String | Kohteen katuosoite
+> postcode | Strin) | Kohteen postinumero
+> city | String | Kaupunki, jossa kohde sijaitsee
 #
 
 > ### _Types_
@@ -92,9 +92,9 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> typeid | int PK | Lipputyypin id
+> typeid | long PK | Lipputyypin id
 > price | float | Lipun hinta
-> typename | varchar(50) | Lipputyypin kuvaus (esim. aikuinen)
+> typename | String | Lipputyypin kuvaus (esim. aikuinen)
 #
 
 > ### _Transactions_
@@ -102,7 +102,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> trid | int PK | Myyntitapahtuman id
+> trid | long PK | Myyntitapahtuman id
 > trtime | datetime |  Myyntitapahtuman ajankohta
 #
 > ### _Tickets_
@@ -110,12 +110,30 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> ticketid | int PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
-> typeid | int FK |  Lipputyypin id
-> trid | int FK | Myyntitapahtuman id
-> eventid | int FK | Tapahtuman id
+> ticketid | long PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
+> typeid | long FK |  Lipputyypin id
+> trid | long FK | Myyntitapahtuman id
+> eventid | long FK | Tapahtuman id
+#
+
 
 
 ## Tekninen kuvaus
 
 Kehityksen alkuvaiheessa käytämme tietokannan rakentamisessa H2-kantaa. REST-rajapinnan kuvaukset ovat omissa dokumentaatioissaan.
+
+## Autentikointi
+
+Järjestelmässä käytetään alkuvaiheessa Basic authentication:a. Käyttäjätietoja ylläpidetään Users-taulussa:
+
+>
+> Kenttä | Tyyppi | Kuvaus
+> ------ | ------ | ------
+> userid | long PK | Käyttäjän id
+> firstName | String |  Käyttäjän etunimi
+> lastName | String | Käyttäjän sukunimi
+> username | String | Käyttäjätunnus
+> password | String | Salasana
+> role | String | Käyttäjärooli
+
+Testikäyttöön H2 -kantaan luodaan käynnityksen yhteydessä yksi testikäyttäjä, jonka tunnukset ovat ***user/user***

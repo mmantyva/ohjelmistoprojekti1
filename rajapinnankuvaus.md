@@ -8,20 +8,20 @@ Kehitysvaiheessa tiimin jäsenet ajavat projektia kukin omalla paikallisella pal
 ## Endpointit
 Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoimia. Käyttämäämme kovakoodattua testidataa lukuunottamatta H2-tietokantaan ei tallennu persistenttiä dataa.
 
-### Paikka-endpointit
+### [Paikka-endpointit](paikat.md)
 * Näytä kaikki paikat: GET `api/venues`
-* Näytä yksittäinen tapahtuma: GET `api/venues/{id}`
-* Tallenna uusi tapahtuma: POST `api/venues`
-* Muokkaa osaa yksittäisestä tapahtumasta: PATCH `api/venues/{id}`
-* Muokkaa kokonaista yksittäistä tapahtumaa: PUT `api/venues/{id}`
-* Poista yksittäinen tapahtuma: DELETE `api/venues/{id}`
+* Näytä yksittäinen paikka: GET `api/venues/{id}`
+* Tallenna uusi paikka: POST `api/venues`
+* Muokkaa osaa yksittäisestä paikasta: PATCH `api/venues/{id}`
+* Muokkaa kokonaista yksittäistä paikkaa: PUT `api/venues/{id}`
+* Poista yksittäinen paikka: DELETE `api/venues/{id}`
 
-### Tapahtuma-endpointit
+### [Tapahtuma-endpointit](tapahumat.md)
 * Näytä kaikki tapahtumat: GET `api/events`
 * Näytä yksittäinen tapahtuma: GET `api/events/{id}`
 * Tallenna uusi tapahtuma: POST `api/events`
-* Muokkaa osaa yksittäisestä myyntitapahtumasta: PATCH `api/events/{id}`
-* Muokkaa kokonaista yksittäistä myyntitapahtumaa: PUT `api/events/{id}`
+* Muokkaa osaa yksittäisestä tapahtumasta: PATCH `api/events/{id}`
+* Muokkaa kokonaista yksittäistä tapahtumaa: PUT `api/events/{id}`
 * Poista yksittäinen myyntitapahtuma: DELETE `api/events/{id}`
 
 ### Lippu-endpointit

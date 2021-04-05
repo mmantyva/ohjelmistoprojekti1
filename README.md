@@ -120,7 +120,9 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 
 ## Tekninen kuvaus
 
-Kehityksen alkuvaiheessa käytämme tietokannan rakentamisessa H2-kantaa. REST-rajapinnan kuvaukset ovat omissa dokumentaatioissaan.
+Kehityksen alkuvaiheessa käytämme tietokannan rakentamisessa H2-kantaa. 
+
+[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](rajapinnankuvaus.md)
 
 ## Autentikointi
 

@@ -24,7 +24,7 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä tapahtumaa: PUT `api/events/{id}`
 * Poista yksittäinen myyntitapahtuma: DELETE `api/events/{id}`
 
-### Lippu-endpointit
+### [Lippu-endpointit](liput.md)
 * Näytä kaikki liput: GET `api/tickets`
 * Näytä yksittäinen lippu: GET `api/tickets/{id}`
 * Tallenna uusi lippu: POST `api/tickets`

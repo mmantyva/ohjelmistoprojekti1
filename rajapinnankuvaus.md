@@ -48,3 +48,11 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä myyntitapahtumaa: PUT `api/transactions/{id}`
 * Poista yksittäinen myyntiapahtuma: DELETE `api/transactions/{id}`
 
+### Käyttäjä-endpointit
+* Näytä kaikki myyntitapahtumat: GET `api/users`
+* Näytä yksittäinen myyntitapahtuma: GET `api/users/{id}`
+* Tallenna uusi tapahtuma: POST `api/users`
+* Muokkaa osaa yksittäisestä myyntitapahtumasta: PATCH `api/users/{id}`
+* Muokkaa kokonaista yksittäistä myyntitapahtumaa: PUT `api/users/{id}`
+* Poista yksittäinen myyntiapahtuma: DELETE `api/users/{id}`
+

@@ -138,4 +138,6 @@ Järjestelmässä käytetään alkuvaiheessa Basic authentication:a. Käyttäjä
 > password | String | Salasana
 > role | String | Käyttäjärooli
 
+Salasanoista tallennetaan BCrypt tiiviste.
+
 Testikäyttöön H2 -kantaan luodaan käynnityksen yhteydessä yksi testikäyttäjä, jonka tunnukset ovat ***user/user***

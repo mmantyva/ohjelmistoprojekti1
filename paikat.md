@@ -55,7 +55,8 @@
 
 **Vastauksen paluukoodi** : `200 OK`
 
-## Poista yksittäinen paikka:  `api/events/{id}`
+## Poista yksittäinen paikka
+
 **URL** : `api/venues/{id}`
 
 **Method** : `DELETE`

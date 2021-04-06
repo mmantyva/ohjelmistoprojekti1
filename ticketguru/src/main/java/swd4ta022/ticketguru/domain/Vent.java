@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
 
@@ -18,25 +17,25 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 @Entity
-public class Event {
+public class Vent {
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-	private long eventid;
+	private long ventid;
 	
 	@NotBlank(message="Event must have a name")
 	//@Max(50)
-	private String eventname;
+	private String ventname;
 	
 	@NotBlank(message="Event must have a time")
-	private String eventtime;
+	private String venttime;
 	
 	@NotBlank(message="Event must have a performer")
 	//@Max(50)
 	private String performer;
 	
 	//@Max(250)
-	private String desc;
+	private String description;
 	
 	@Positive(message = "Only positive numbers, please")
 	private int capacity;
@@ -45,47 +44,47 @@ public class Event {
 	@JoinColumn(name="venueid")
 	private Venue venue;
 	
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="event")
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="vent")
 	@JsonBackReference
 	private List<Ticket> tickets;
 
-	public Event() {
+	public Vent() {
 	}
 	
 	
-	public Event(String eventname, String eventtime, String performer, String desc, int capacity, Venue venue) {
+	public Vent (String ventname, String venttime, String performer, String description, int capacity, Venue venue) {
 		super();
-		this.eventname = eventname;
-		this.eventtime = eventtime;
+		this.ventname = ventname;
+		this.venttime = venttime;
 		this.performer = performer;
-		this.desc = desc;
+		this.description = description;
 		this.capacity = capacity;
 		this.venue = venue;
 	}
 
 
 	public long getEventid() {
-		return eventid;
+		return ventid;
 	}
 
-	public void setEventid(long eventid) {
-		this.eventid = eventid;
+	public void setEventid(long ventid) {
+		this.ventid = ventid;
 	}
 
 	public String getEventname() {
-		return eventname;
+		return ventname;
 	}
 
-	public void setEventname(String eventname) {
-		this.eventname = eventname;
+	public void setEventname(String ventname) {
+		this.ventname = ventname;
 	}
 
 	public String getEventtime() {
-		return eventtime;
+		return venttime;
 	}
 
-	public void setEventtime(String eventtime) {
-		this.eventtime = eventtime;
+	public void setEventtime(String venttime) {
+		this.venttime = venttime;
 	}
 	
 
@@ -97,12 +96,12 @@ public class Event {
 		this.performer = performer;
 	}
 
-	public String getDesc() {
-		return desc;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public int getCapacity() {
@@ -121,7 +120,7 @@ public class Event {
 		this.venue = venue;
 	}
 
-	public Event(List<Ticket> tickets) {
+	public Vent(List<Ticket> tickets) {
 		this.tickets = tickets;
 	}
 

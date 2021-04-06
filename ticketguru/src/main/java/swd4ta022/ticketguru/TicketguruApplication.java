@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Bean;
 
 import swd4ta022.ticketguru.TicketguruApplication;
 
-import swd4ta022.ticketguru.domain.Event;
-import swd4ta022.ticketguru.domain.EventRepository;
+import swd4ta022.ticketguru.domain.Vent;
+import swd4ta022.ticketguru.domain.VentRepository;
 import swd4ta022.ticketguru.domain.Ticket;
 import swd4ta022.ticketguru.domain.TicketRepository;
 import swd4ta022.ticketguru.domain.Transaction;

@@ -11,20 +11,20 @@ import org.springframework.stereotype.Component;
 public class DetailsService implements UserDetailsService {
 	
 	@Autowired
-	UserRepository users;
+	AppuserRepository appusers;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
 	
-		User user = users.findByUsername(username);
-		if (user == null) {
+		Appuser appuser = appusers.findByUsername(username);
+		if (appuser == null) {
 			throw new UsernameNotFoundException(username + " not found");
 		}
 		return new org.springframework.security.core.userdetails.User(
-				user.getUsername(), 
-				user.getPassword(),
-				AuthorityUtils.createAuthorityList(user.getRole())
+				appuser.getUsername(), 
+				appuser.getPassword(),
+				AuthorityUtils.createAuthorityList(appuser.getRole())
 		);
 	}
 

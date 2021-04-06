@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class User {
+public class Appuser {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -26,11 +26,11 @@ public class User {
 	@JsonIgnore
 	private String role;
 	
-	public User() {
+	public Appuser() {
 		super();
 	}
 
-	public User(String firstName, String lastName, String username, String password, String role) {
+	public Appuser(String firstName, String lastName, String username, String password, String role) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;

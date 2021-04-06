@@ -7,8 +7,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.stereotype.Component;
 
+import swd4ta022.ticketguru.domain.Appuser;
 import swd4ta022.ticketguru.domain.DetailsService;
-import swd4ta022.ticketguru.domain.User;
 
 @Component
 @EnableWebSecurity
@@ -19,7 +19,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(detailsService).passwordEncoder(User.PASSWORD_ENCODER);
+		auth.userDetailsService(detailsService).passwordEncoder(Appuser.PASSWORD_ENCODER);
 	}
 	
 	@Override

@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import swd4ta022.ticketguru.domain.Event;
-import swd4ta022.ticketguru.domain.EventRepository;
+import swd4ta022.ticketguru.domain.Vent;
+import swd4ta022.ticketguru.domain.VentRepository;
 import swd4ta022.ticketguru.domain.Venue;
 
 
@@ -32,7 +32,7 @@ import swd4ta022.ticketguru.domain.Venue;
 public class EventController {
 	
 	@Autowired 
-	private EventRepository erepository; 	
+	private VentRepository vrepository; 	
 	
 	// REST-metodit:
 	
@@ -40,19 +40,19 @@ public class EventController {
 
 	//  näytä tapahtumat:
 	@RequestMapping(value="/events", method=RequestMethod.GET)
-	public @Valid @ResponseBody List<Event> eventsRest() {
-		return (List<Event>) erepository.findAll();
+	public @Valid @ResponseBody List<Vent> eventsRest() {
+		return (List<Vent>) vrepository.findAll();
 	}
 	
 	// näytä yksittäinen tapahtuma:
 	@RequestMapping(value="/events/{id}", method=RequestMethod.GET)
-	public @Valid @ResponseBody Optional<Event> getEventRest(@PathVariable("id") Long eventid) {
-		return erepository.findById(eventid);
+	public @Valid @ResponseBody Optional<Vent> getEventRest(@PathVariable("id") Long ventid) {
+		return vrepository.findById(ventid);
 	} 
 	
 	// tallenna uusi tapahtuma:
 	@PostMapping("/events")
-	ResponseEntity<String> addEvent (@Valid @RequestBody Event event){
+	ResponseEntity<String> addEvent (@Valid @RequestBody Vent vent){
 		return ResponseEntity.ok("Event is saved");
 	}
 	

@@ -16,7 +16,7 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä paikkaa: PUT `api/venues/{id}`
 * Poista yksittäinen paikka: DELETE `api/venues/{id}`
 
-### [Tapahtuma-endpointit](tapahumat.md)
+### [Tapahtuma-endpointit](tapahtumat.md)
 * Näytä kaikki tapahtumat: GET `api/events`
 * Näytä yksittäinen tapahtuma: GET `api/events/{id}`
 * Tallenna uusi tapahtuma: POST `api/events`
@@ -48,7 +48,7 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä myyntitapahtumaa: PUT `api/transactions/{id}`
 * Poista yksittäinen myyntiapahtuma: DELETE `api/transactions/{id}`
 
-### Käyttäjä-endpointit
+### [Käyttäjä-endpointit](käyttäjät.md)
 * Näytä kaikki myyntitapahtumat: GET `api/users`
 * Näytä yksittäinen myyntitapahtuma: GET `api/users/{id}`
 * Tallenna uusi tapahtuma: POST `api/users`

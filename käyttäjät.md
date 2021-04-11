@@ -54,7 +54,7 @@
 
 **Vastauksen paluukoodi** : `200 OK`
 
-## Poista yksittäinen käyttäjä:  
+## Poista yksittäinen käyttäjä 
 **URL** : `api/users/{id}`
 
 **Method** : `DELETE`

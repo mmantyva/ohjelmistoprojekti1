@@ -89,7 +89,7 @@
 
 **Vastauksen paluukoodi** : `200 OK`
 
-## Poista yksittäinen paikka:  
+## Poista yksittäinen tapahtuma 
 
 **URL** : `api/events/{id}`
 

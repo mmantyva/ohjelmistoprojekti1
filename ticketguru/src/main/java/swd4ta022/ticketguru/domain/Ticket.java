@@ -14,8 +14,8 @@ public class Ticket {
 	private long ticketid;
 	
 	@ManyToOne
-	@JoinColumn(name = "eventid")
-	private Event event;
+	@JoinColumn(name = "ventid")
+	private Vent vent;
 	
 	@ManyToOne
 	@JoinColumn(name = "typeid")
@@ -27,9 +27,9 @@ public class Ticket {
 
 	public Ticket() {}
 	
-	public Ticket(Event event, Type type, Transaction transaction) {
+	public Ticket(Vent vent, Type type, Transaction transaction) {
 		super();
-		this.event = event;
+		this.vent = vent;
 		this.type = type;
 		this.transaction = transaction;
 	}
@@ -43,12 +43,12 @@ public class Ticket {
 		this.ticketid = ticketid;
 	}
 
-	public Event getEvent() {
-		return event;
+	public Vent getVent() {
+		return vent;
 	}
 
-	public void setEvent (Event event) {
-		this.event = event;
+	public void setVent (Vent vent) {
+		this.vent = vent;
 	}
 
 	public Type getType() {

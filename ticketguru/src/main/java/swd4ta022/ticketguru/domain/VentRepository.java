@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface EventRepository extends CrudRepository<Event, Long> {
+public interface VentRepository extends CrudRepository<Vent, Long> {
 
-	List<Event> findByEventname(String eventname);
+	List<Vent> findByVentname(String ventname);
 }

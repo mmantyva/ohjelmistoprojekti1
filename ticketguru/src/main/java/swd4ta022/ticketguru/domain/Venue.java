@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -38,7 +37,7 @@ public class Venue {
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="venue")
 	@JsonBackReference
-	private List<Event> events;
+	private List<Vent> vents;
 		
 	public Venue(String venuename, String address, String postcode, String city) {
 		super();
@@ -83,12 +82,12 @@ public class Venue {
 		this.city = city;
 	}
 
-	public List<Event> getEvents() {
-		return events;
+	public List<Vent> getVents() {
+		return vents;
 	}
 
-	public void setEvents(List<Event> events) {
-		this.events = events;
+	public void setVents(List<Vent> vents) {
+		this.vents = vents;
 	}
 	
 

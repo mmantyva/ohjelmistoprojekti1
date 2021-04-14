@@ -54,13 +54,12 @@ public class TicketguruApplication {
 				 * 
 				 * 
 				 * Transaction transaction1 = new Transaction("2021-03-03");
-				 * trrepository.save(transaction1);
-				 * 
-				 * 
-				 * 
-				 * //User Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
-				 * "user"); arepository.save(appuser);
-				 */
+				 * trrepository.save(transaction1); */
+
+				 //User
+				 Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
+				 "user"); arepository.save(appuser);
+				 
 
 		 };
 	 }

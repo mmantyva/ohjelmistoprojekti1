@@ -41,10 +41,10 @@ public class TicketguruApplication {
 			 vrepository.save(venue2);
 			 vrepository.save(venue3);
 			 
-			 Vent vent1 = new Vent("Iso D", "11.11.2022", "Danny", "Kuvaus1", 2000, vrepository.findByVenuename("Tavastia").get(0));
-			 Vent vent2 = new Vent("Konsertti", "22.1.2021. klo. 19", "Armi", "Kuvaus2", 2000, vrepository.findByVenuename("Finlandiatalo").get(0));
-			 ventrepository.save(vent1);
-			 ventrepository.save(vent2);
+			 Vent event1 = new Vent("Iso D", "11.11.2022", "Danny", "Kuvaus1", 2000, vrepository.findByVenuename("Tavastia").get(0));
+			 Vent event2 = new Vent("Konsertti", "22.1.2021. klo. 19", "Armi", "Kuvaus2", 2000, vrepository.findByVenuename("Finlandiatalo").get(0));
+			 ventrepository.save(event1);
+			 ventrepository.save(event2);
 			 
 			 Type type1 = new Type("Child", 10.0);
 			 Type type2 = new Type("Adult", 30.0);
@@ -53,16 +53,14 @@ public class TicketguruApplication {
 			 typerepository.save(type2);
 			 typerepository.save(type3);
 			 
-			 // event, type, transaction
-			 Ticket ticket1 = new Ticket();
-			 ticketrepository.save(ticket1); 
 			 
 			 Transaction transaction1 = new Transaction("2021-03-03");
 			 trrepository.save(transaction1);
-			 
-			 //User
-			 Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user", "user");
-			 arepository.save(appuser);
+
+				 //User
+				 Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
+				 "user"); arepository.save(appuser);
+				 
 
 		 };
 	 }

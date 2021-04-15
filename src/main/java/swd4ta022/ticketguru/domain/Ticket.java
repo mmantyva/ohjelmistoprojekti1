@@ -6,12 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.util.Date;
 
 @Entity
 public class Ticket {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long ticketid;
+	
+	private Date used;
 	
 	@ManyToOne
 	@JoinColumn(name = "ventid")
@@ -27,8 +30,9 @@ public class Ticket {
 
 	public Ticket() {}
 	
-	public Ticket(Vent vent, Type type, Transaction transaction) {
+	public Ticket(Date used, Vent vent, Type type, Transaction transaction) {
 		super();
+		this.used = used;
 		this.vent = vent;
 		this.type = type;
 		this.transaction = transaction;
@@ -41,6 +45,14 @@ public class Ticket {
 
 	public void setTicketid(long ticketid) {
 		this.ticketid = ticketid;
+	}
+	
+	public Date getUsed() {
+		return used;
+	}
+
+	public void setUsed(Date used) {
+		this.used = used;
 	}
 
 	public Vent getVent() {

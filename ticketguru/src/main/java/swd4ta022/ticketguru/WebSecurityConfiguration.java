@@ -9,7 +9,7 @@
 //
 //import swd4ta022.ticketguru.domain.Appuser;
 //import swd4ta022.ticketguru.domain.DetailsService;
-
+//
 //@Component
 //@EnableWebSecurity
 //public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {

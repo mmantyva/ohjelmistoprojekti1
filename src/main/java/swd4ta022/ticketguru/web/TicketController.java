@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import swd4ta022.ticketguru.domain.Ticket;
 import swd4ta022.ticketguru.domain.TicketRepository;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Controller
 public class TicketController {
 	

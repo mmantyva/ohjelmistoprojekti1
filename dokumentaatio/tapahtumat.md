@@ -5,7 +5,7 @@
 
 ## Hae kaikkien tapahtumien tiedot 
 
-**URL** : `api/events`
+**URL** : `api/vents`
 
 **Method** : `GET`
 
@@ -13,7 +13,7 @@
 
 ## Hae yksittäisen tapahtuman tiedot
 
-**URL** : `api/events/{id}`
+**URL** : `api/vents/{id}`
 
 **Method** : `GET`
 
@@ -40,7 +40,7 @@
 ```
 ## Tallenna uusi tapahtuma
 
-**URL** : `api/events`
+**URL** : `api/vents`
 
 **Method** : `POST`
 
@@ -62,7 +62,7 @@
 **Vastauksen paluukoodi**: `201 Created`
 
 ## Muokkaa osaa yksittäisestä tapahtumasta
-**URL** : `api/events/{id}`
+**URL** : `api/vents/{id}`
 
 **Method** : `PATCH`
 
@@ -83,7 +83,7 @@
 
 ## Muokkaa kokonaista yksittäistä tapahtumaa
 
-**URL** : `api/events/{id}`
+**URL** : `api/vents/{id}`
 
 **Method** : `PUT`
 
@@ -91,7 +91,7 @@
 
 ## Poista yksittäinen tapahtuma 
 
-**URL** : `api/events/{id}`
+**URL** : `api/vents/{id}`
 
 **Method** : `DELETE`
 

@@ -13,7 +13,6 @@ public class Ticket {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long ticketid;
-	
 	private Date used;
 	
 	@ManyToOne

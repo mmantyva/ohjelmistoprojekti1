@@ -1,6 +1,7 @@
 package swd4ta022.ticketguru.domain;
 
 import java.util.List;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -15,13 +16,13 @@ public class Transaction {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long trid;
-	private String trtime; //en jaksanut nyt t�ss� vaiheessa mietti� tietotyyppej� niin laitoin stringin paikkaa pit�m��n :D
+	private Date trtime; 
 
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="transaction")
 	private List<Ticket> tickets;
 	
-	public Transaction(String trtime) {
+	public Transaction(Date trtime) {
 		super();
 		this.trtime = trtime;
 	}
@@ -35,10 +36,10 @@ public class Transaction {
 	public void setTrid(long trid) {
 		this.trid = trid;
 	}
-	public String getTrtime() {
+	public Date getTrtime() {
 		return trtime;
 	}
-	public void setTrtime(String trtime) {
+	public void setTrtime(Date trtime) {
 		this.trtime = trtime;
 	}
 

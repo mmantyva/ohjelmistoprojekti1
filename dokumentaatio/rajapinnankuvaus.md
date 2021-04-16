@@ -3,10 +3,10 @@
 Tähän dokumenttiin kerätään projektin edetessä päivittyvää kuvausta siihen liittyvästä REST-rajapinnasta.
 
 ## Base-URL
-Kehitysvaiheessa tiimin jäsenet ajavat projektia kukin omalla paikallisella palvelimellaan osoitteessa http://localhost:8080. 
+Tiimin jäsenet voivat ajaa projektia kukin omalla paikallisella palvelimellaan portissa 8080, http://localhost:8080/api. Sovellus on julkaistu Herokussa, ja rajapinta saatavilla osoitteessa https://hot-ticketguru.herokuapp.com.
 
 ## Endpointit
-Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoimia. Käyttämäämme kovakoodattua testidataa lukuunottamatta H2-tietokantaan ei tallennu persistenttiä dataa.
+Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoimia, vaikka olemme jo toteuttaneet järjestelmään autentikoinnin ja autorisoinnin. 
 
 ### [Paikka-endpointit](paikat.md)
 * Näytä kaikki paikat: GET `api/venues`
@@ -17,12 +17,12 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Poista yksittäinen paikka: DELETE `api/venues/{id}`
 
 ### [Tapahtuma-endpointit](tapahtumat.md)
-* Näytä kaikki tapahtumat: GET `api/events`
-* Näytä yksittäinen tapahtuma: GET `api/events/{id}`
-* Tallenna uusi tapahtuma: POST `api/events`
-* Muokkaa osaa yksittäisestä tapahtumasta: PATCH `api/events/{id}`
-* Muokkaa kokonaista yksittäistä tapahtumaa: PUT `api/events/{id}`
-* Poista yksittäinen myyntitapahtuma: DELETE `api/events/{id}`
+* Näytä kaikki tapahtumat: GET `api/vents`
+* Näytä yksittäinen tapahtuma: GET `api/vents/{id}`
+* Tallenna uusi tapahtuma: POST `api/vents`
+* Muokkaa osaa yksittäisestä tapahtumasta: PATCH `api/vents/{id}`
+* Muokkaa kokonaista yksittäistä tapahtumaa: PUT `api/vents/{id}`
+* Poista yksittäinen myyntitapahtuma: DELETE `api/vents/{id}`
 
 ### [Lippu-endpointit](liput.md)
 * Näytä kaikki liput: GET `api/tickets`

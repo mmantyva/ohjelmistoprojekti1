@@ -43,6 +43,13 @@
 
 **Vastauksen paluukoodi** : `200 OK`
 
+***Kutsun sisältö merkitessä lippua käytetyksi:***
+```json
+{
+    "used": "{{$isoTimestamp}}"
+}
+```
+
 ## Muokkaa kokonaista yksittäistä lippua
 
 **URL** : `api/tickets/{id}`

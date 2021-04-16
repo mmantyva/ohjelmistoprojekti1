@@ -28,7 +28,7 @@ Ensimmäisessä vaiheessa järjestelmän käyttäjille on tunnistettu seuraavat 
 
 Alustava käyttötapauskaavio:
 
-![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/roolit1.jpg)
+![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/roolit1.jpg)
 
 ### Käyttäjätarinat
 
@@ -57,7 +57,7 @@ Järjestelmän tietokantarakenne koostuu viidestä tietokantataulusta: tapahtuma
 
 Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
-![Tietokantakaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/tietokanta.jpg)
+![Tietokantakaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/tietokanta.jpg)
 
 Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakemistossa:
 
@@ -83,7 +83,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > venueid | long PK | Tilan/paikan id
 > venuename | String | Paikan nimi
 > address | String | Kohteen katuosoite
-> postcode | Strin) | Kohteen postinumero
+> postcode | String | Kohteen postinumero
 > city | String | Kaupunki, jossa kohde sijaitsee
 #
 
@@ -105,24 +105,38 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > trid | long PK | Myyntitapahtuman id
 > trtime | datetime |  Myyntitapahtuman ajankohta
 #
+
 > ### _Tickets_
 > _Tickets-taulussa on tiedot yksittäisistä myydyistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
 > ticketid | long PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
+> used | 
 > typeid | long FK |  Lipputyypin id
 > trid | long FK | Myyntitapahtuman id
 > eventid | long FK | Tapahtuman id
 #
 
+> ### _Users_
+> _Users-taulussa on tiedot järjestelmään rekisteröityneistä käyttäjistä._
+>
+> Kenttä | Tyyppi | Kuvaus
+> ------ | ------ | ------
+> userid | long PK | Uniikki käyttäjä-id
+> firstName | String | Käyttäjän etunimi
+> lastName | String  | Käyttäjän sukunimi
+> username | String FK | Käyttäjän valitsema käyttäjätunnus
+> password | String FK | Käyttäjän valitsema salasana
+> role | String FK | Käyttäjäroolin tyyppi
+#
 
 
 ## Tekninen kuvaus
 
 Kehityksen alkuvaiheessa käytämme tietokannan rakentamisessa H2-kantaa. 
 
-[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](rajapinnankuvaus.md)
+[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](dokumentaatio/rajapinnankuvaus.md)
 
 ## Autentikointi
 

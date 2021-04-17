@@ -1,4 +1,4 @@
-package swd4ta022.ticketguru;
+/* package swd4ta022.ticketguru;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,3 +31,4 @@ public class CorsConfiguration implements WebMvcConfigurer{
         };
     }
 } 
+*/

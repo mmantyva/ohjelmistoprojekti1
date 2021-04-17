@@ -29,7 +29,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(detailsService).passwordEncoder(Appuser.PASSWORD_ENCODER);
 	}
 	
-	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
         
@@ -43,7 +42,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 			http.cors();
 	}
 
- 
+ /*
 	@Bean
     CorsConfigurationSource corsConfigurationSource() 
     {
@@ -53,5 +52,5 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    }
+    } */
 }

@@ -5,8 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-//import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -17,7 +17,7 @@ public class Appuser {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long userid;
 	
-//	public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
+	public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
 	private String firstName;
 	private String lastName;
 	private String username;
@@ -35,7 +35,7 @@ public class Appuser {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = username;
-//		setPassword(password);
+		setPassword(password);
 		this.role = role;
 	}
 
@@ -67,9 +67,9 @@ public class Appuser {
 		return password;
 	}
 
-//	public void setPassword(String password) {
-//		this.password = PASSWORD_ENCODER.encode(password);
-//	}
+	public void setPassword(String password) {
+		this.password = PASSWORD_ENCODER.encode(password);
+	}
 
 	public String getRole() {
 		return role;

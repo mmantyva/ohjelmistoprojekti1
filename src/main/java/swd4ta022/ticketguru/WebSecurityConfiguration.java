@@ -38,10 +38,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.anyRequest()
 			.authenticated()
 			.and()
-			.httpBasic()
-			.and()
-			.csrf()
-			.disable();
+			.httpBasic();
+			http.csrf().disable();
 			http.cors();
 	}
 

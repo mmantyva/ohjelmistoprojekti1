@@ -122,8 +122,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 
 Kehityksen alkuvaiheessa käytimme tietokannan rakentamisessa H2-kantaa. Nyt tietokanta pyörii Postgresilla.
 
-[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](rajapinnankuvaus.md)
-
+[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/rajapinnankuvaus.md)
 ## Autentikointi
 
 Järjestelmässä käytetään alkuvaiheessa Basic authentication:a. Käyttäjätietoja ylläpidetään Users-taulussa:

@@ -18,6 +18,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import swd4ta022.ticketguru.domain.Appuser;
 import swd4ta022.ticketguru.domain.DetailsService;
 
+@Component
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {

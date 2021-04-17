@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import swd4ta022.ticketguru.domain.Ticket;
 import swd4ta022.ticketguru.domain.TicketRepository;
 
 @Controller
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TicketController {
 	
 	@Autowired

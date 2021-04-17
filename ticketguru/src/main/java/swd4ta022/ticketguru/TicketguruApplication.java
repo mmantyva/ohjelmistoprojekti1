@@ -4,6 +4,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import swd4ta022.ticketguru.TicketguruApplication;
 
@@ -22,6 +26,8 @@ import swd4ta022.ticketguru.domain.VenueRepository;
 
 
 @SpringBootApplication
+@Configuration
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TicketguruApplication {
 
 
@@ -30,6 +36,21 @@ public class TicketguruApplication {
 		
 		
 	}
+	
+/*	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			
+			public void addCorsMapping(CorsRegistry registry) {
+				registry.addMapping("/**")
+				.allowedMethods("*")
+				.allowedHeaders("*")
+				.allowedOrigins("*");
+			}
+		};
+	}
+	*/
+	
 	@Bean
 	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository, AppuserRepository arepository) {
 		 return (args)->{

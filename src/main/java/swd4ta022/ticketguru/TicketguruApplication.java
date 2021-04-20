@@ -54,8 +54,8 @@ public class TicketguruApplication {
 			 typerepository.save(type3);
 			 
 			 
-			 Transaction transaction1 = new Transaction("2021-03-03");
-			 trrepository.save(transaction1);
+			//Transaction transaction1 = new Transaction("2021-03-03");
+			 //trrepository.save(transaction1);
 
 				 //User
 				 Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",

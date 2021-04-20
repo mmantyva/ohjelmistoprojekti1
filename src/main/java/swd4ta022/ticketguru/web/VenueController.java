@@ -8,6 +8,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -28,7 +29,7 @@ import swd4ta022.ticketguru.domain.Venue;
 import swd4ta022.ticketguru.domain.VenueRepository;
 
 
-@RestController
+@RepositoryRestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class VenueController {
     @Autowired 

@@ -16,7 +16,7 @@ import swd4ta022.ticketguru.domain.Transaction;
 import swd4ta022.ticketguru.domain.TransactionRepository;
 
 @Controller
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TransactionController {
 	
 	@Autowired

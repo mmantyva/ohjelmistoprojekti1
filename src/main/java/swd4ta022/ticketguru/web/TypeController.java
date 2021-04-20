@@ -30,7 +30,7 @@ import swd4ta022.ticketguru.domain.Venue;
 
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TypeController {
 	
 	@Autowired

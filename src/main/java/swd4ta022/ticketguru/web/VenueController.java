@@ -29,7 +29,7 @@ import swd4ta022.ticketguru.domain.VenueRepository;
 
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class VenueController {
     @Autowired 
 	private VenueRepository vrepository; 	

@@ -40,11 +40,11 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.authenticated()
 			.and()
 			.httpBasic();
-			http.csrf().disable();
+			http.csrf().disable().cors();
 			http.cors();
 	}
 
- /*
+ 
 	@Bean
     CorsConfigurationSource corsConfigurationSource() 
     {
@@ -54,5 +54,5 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
-    } */
+    } 
 }

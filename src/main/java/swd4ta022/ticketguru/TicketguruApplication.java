@@ -33,7 +33,7 @@ public class TicketguruApplication {
 	@Bean
 	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository/*, AppuserRepository arepository*/) {
 		 return (args)->{
-			 /*
+			 
 			 Venue venue1 = new Venue("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
 			 Venue venue2 = new Venue("Finlandiatalo", "Mansku", "00100", "Helsinki");
 			 Venue venue3 = new Venue("Lutakko", "Lutakonaukio 3", "40100", "Jyväskylä");
@@ -46,9 +46,9 @@ public class TicketguruApplication {
 			 ventrepository.save(event1);
 			 ventrepository.save(event2);
 			 
-			 Type type1 = new Type("Child", 10.0);
-			 Type type2 = new Type("Adult", 30.0);
-			 Type type3 = new Type("Student", 15.0);
+			 Type type1 = new Type("Child", 10.0, event2);
+			 Type type2 = new Type("Adult", 30.0, event1);
+			 Type type3 = new Type("Student", 15.0, event1);
 			 typerepository.save(type1);
 			 typerepository.save(type2);
 			 typerepository.save(type3);
@@ -58,9 +58,10 @@ public class TicketguruApplication {
 			 //trrepository.save(transaction1);
 
 				 //User
-				 Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
+				/* Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
 				 "user"); arepository.save(appuser);
-			 */
+				 */
+			 
 
 		 };
 	 }

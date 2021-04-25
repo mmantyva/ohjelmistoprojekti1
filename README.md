@@ -95,6 +95,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > typeid | long PK | Lipputyypin id
 > price | float | Lipun hinta
 > typename | String | Lipputyypin kuvaus (esim. aikuinen)
+> eventid | long FK | Tapahtuman id
 #
 
 > ### _Transactions_
@@ -110,11 +111,11 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> ticketid | long PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
+> ticketid | long PK | Lipun id 
+> UUID | UUID | Yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
 > used | Date | Ajankohta, jolloin lippu on merkitty käytetyksi (tämänhetkinen aikaleima)
 > typeid | long FK |  Lipputyypin id
 > trid | long FK | Myyntitapahtuman id
-> eventid | long FK | Tapahtuman id
 #
 
 

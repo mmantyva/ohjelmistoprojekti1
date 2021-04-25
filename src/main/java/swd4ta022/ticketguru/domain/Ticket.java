@@ -7,12 +7,16 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 public class Ticket {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long ticketid;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private UUID uuid = UUID.randomUUID();
+	
 	private Date used;
 	
 	/*@ManyToOne
@@ -84,6 +88,14 @@ public class Ticket {
 	@Override
 	public String toString() {
 		return "Ticket [id=" + ticketid + "]";
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 	
 	

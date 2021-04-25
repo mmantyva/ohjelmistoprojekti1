@@ -1,4 +1,6 @@
-package swd4ta022.ticketguru;
+
+ package swd4ta022.ticketguru;
+
 
 import java.util.Arrays;
 
@@ -59,3 +61,4 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return source;
     }
 }
+ 

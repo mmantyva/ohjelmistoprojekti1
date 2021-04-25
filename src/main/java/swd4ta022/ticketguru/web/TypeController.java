@@ -30,7 +30,7 @@ import swd4ta022.ticketguru.domain.TypeRepository;
 import swd4ta022.ticketguru.domain.Venue;
 
 
-@RepositoryRestController
+@Controller
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TypeController {
 	

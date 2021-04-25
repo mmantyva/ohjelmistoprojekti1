@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import swd4ta022.ticketguru.domain.Transaction;
 import swd4ta022.ticketguru.domain.TransactionRepository;
 
-@RepositoryRestController
+@Controller
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TransactionController {
 	

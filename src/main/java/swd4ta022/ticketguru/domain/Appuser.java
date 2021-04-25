@@ -1,4 +1,6 @@
-package swd4ta022.ticketguru.domain;
+
+  package swd4ta022.ticketguru.domain;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -81,9 +83,6 @@ public class Appuser {
 	
 	
 	
-	
-	
-	
-	
+		
 
 }

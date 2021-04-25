@@ -15,8 +15,8 @@ import swd4ta022.ticketguru.domain.Transaction;
 import swd4ta022.ticketguru.domain.TransactionRepository;
 import swd4ta022.ticketguru.domain.Type;
 import swd4ta022.ticketguru.domain.TypeRepository;
-import swd4ta022.ticketguru.domain.Appuser;
-import swd4ta022.ticketguru.domain.AppuserRepository;
+//import swd4ta022.ticketguru.domain.Appuser;
+//import swd4ta022.ticketguru.domain.AppuserRepository;
 import swd4ta022.ticketguru.domain.Venue;
 import swd4ta022.ticketguru.domain.VenueRepository;
 
@@ -31,7 +31,7 @@ public class TicketguruApplication {
 		
 	}
 	@Bean
-	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository, AppuserRepository arepository) {
+	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository/*, AppuserRepository arepository*/) {
 		 return (args)->{
 			 /*
 			 Venue venue1 = new Venue("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");

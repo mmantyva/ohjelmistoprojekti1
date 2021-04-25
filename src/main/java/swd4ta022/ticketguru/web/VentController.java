@@ -29,7 +29,7 @@ import swd4ta022.ticketguru.domain.VentRepository;
 import swd4ta022.ticketguru.domain.Venue;
 
 
-@RestController
+@Controller
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class VentController {
 	

@@ -1,3 +1,4 @@
+
 package swd4ta022.ticketguru.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;

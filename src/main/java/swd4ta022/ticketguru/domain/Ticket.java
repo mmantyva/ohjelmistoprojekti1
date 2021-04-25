@@ -15,9 +15,10 @@ public class Ticket {
 	private long ticketid;
 	private Date used;
 	
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn(name = "ventid")
 	private Vent vent;
+	*/
 	
 	@ManyToOne
 	@JoinColumn(name = "typeid")
@@ -29,10 +30,10 @@ public class Ticket {
 
 	public Ticket() {}
 	
-	public Ticket(Date used, Vent vent, Type type, Transaction transaction) {
+	public Ticket(Date used, /*Vent vent,*/ Type type, Transaction transaction) {
 		super();
 		this.used = used;
-		this.vent = vent;
+		/*this.vent = vent;*/
 		this.type = type;
 		this.transaction = transaction;
 	}
@@ -54,6 +55,7 @@ public class Ticket {
 		this.used = used;
 	}
 
+	/*
 	public Vent getVent() {
 		return vent;
 	}
@@ -61,6 +63,7 @@ public class Ticket {
 	public void setVent (Vent vent) {
 		this.vent = vent;
 	}
+	*/
 
 	public Type getType() {
 		return type;

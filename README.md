@@ -15,7 +15,7 @@ Projektin aiheena on lipunmyyntijärjestelmän kehittäminen asiakkaana olevalle
 * Järjestelmästä lipputoimisto saa tarkasteltavaksi myyntiraportteja, joissa myyntitapahtumat on eriteltynä.
 * Jatkokehityksessä järjestelmään aiotaan lisätä vielä verkkokauppa, jolla lipputoimiston asiakkaat voivat itse ostaa lippuja.
 
-Palvelu toteutetaan Javalla Spring Boot -kehystä käyttäen. Lipunmyyntijärjestelmää on tarkoitus käyttää vain tietokoneelta käsin eli käytettävinä päätelaitteina ovat pöytäkone ja läppäri. Palvelinpuolen ratkaisut ja teknologiat määritellään myöhemmin.
+Palvelu toteutetaan Javalla Spring Boot -kehystä käyttäen. Lipunmyyntijärjestelmää on tarkoitus käyttää vain tietokoneelta käsin eli käytettävinä päätelaitteina ovat pöytäkone ja läppäri.
 
 ## Järjestelmän määrittely
 ### Käyttäjäroolit
@@ -95,6 +95,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > typeid | long PK | Lipputyypin id
 > price | float | Lipun hinta
 > typename | String | Lipputyypin kuvaus (esim. aikuinen)
+> eventid | long FK | Tapahtuman id
 #
 
 > ### _Transactions_
@@ -103,27 +104,26 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
 > trid | long PK | Myyntitapahtuman id
-> trtime | datetime |  Myyntitapahtuman ajankohta
+> trtime | Date |  Myyntitapahtuman ajankohta (tämänhetkinen aikaleima)
 #
 > ### _Tickets_
 > _Tickets-taulussa on tiedot yksittäisistä myydyistä lipuista. Jokainen lippu kuuluu yhteen lipputyypiin ja yhteen myyntitapahtumaan._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> ticketid | long PK | Lipun id, yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
+> ticketid | long PK | Lipun id 
+> UUID | UUID | Yksilöllinen koodi jonka avulla esim. lipuntarkastaja tarkistaa lipun
+> used | Date | Ajankohta, jolloin lippu on merkitty käytetyksi (tämänhetkinen aikaleima)
 > typeid | long FK |  Lipputyypin id
 > trid | long FK | Myyntitapahtuman id
-> eventid | long FK | Tapahtuman id
 #
-
 
 
 ## Tekninen kuvaus
 
-Kehityksen alkuvaiheessa käytämme tietokannan rakentamisessa H2-kantaa. 
+Kehityksen alkuvaiheessa käytimme tietokannan rakentamisessa H2-kantaa. Nyt tietokanta pyörii Postgresilla.
 
-[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](rajapinnankuvaus.md)
-
+[REST-rajapinnan kuvaus on omassa dokumentaatioissaan.](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/rajapinnankuvaus.md)
 ## Autentikointi
 
 Järjestelmässä käytetään alkuvaiheessa Basic authentication:a. Käyttäjätietoja ylläpidetään Users-taulussa:

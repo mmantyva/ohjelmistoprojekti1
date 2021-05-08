@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import swd4ta022.ticketguru.domain.Type;
+import swd4ta022.ticketguru.domain.TicketType;
 import swd4ta022.ticketguru.domain.TypeRepository;
 import swd4ta022.ticketguru.domain.Venue;
 
@@ -39,19 +39,19 @@ public class TypeController {
 	
 	//näytä lipputyypit
 	@RequestMapping(value="/types", method=RequestMethod.GET)
-	public @ResponseBody List<Type> typesRest() {
-		return (List<Type>) typerepository.findAll();
+	public @ResponseBody List<TicketType> typesRest() {
+		return (List<TicketType>) typerepository.findAll();
 	}
 	
 	// näytä yksittäinen lipputyyppi:
 	@RequestMapping(value="/types/{id}", method=RequestMethod.GET)
-	public @ResponseBody Optional<Type> getTypeRest(@PathVariable("id") Long typeid) {
+	public @ResponseBody Optional<TicketType> getTypeRest(@PathVariable("id") Long typeid) {
 		return typerepository.findById(typeid);
 	} 
 	
 	// tallenna uusi lipputyyppi:
 	@PostMapping("/types")
-	ResponseEntity<String> addType (@Valid @RequestBody Type type){
+	ResponseEntity<String> addType (@Valid @RequestBody TicketType type){
 		return ResponseEntity.ok("Ticket type is saved");
 	}
 	

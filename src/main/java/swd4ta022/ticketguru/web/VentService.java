@@ -10,7 +10,7 @@ import swd4ta022.ticketguru.domain.Vent;
 import swd4ta022.ticketguru.domain.VentDTO;
 import swd4ta022.ticketguru.domain.VentRepository;
 import swd4ta022.ticketguru.domain.Venue;
-import swd4ta022.ticketguru.domain.Type;
+import swd4ta022.ticketguru.domain.TicketType;
 
 @Service
 public class VentService {

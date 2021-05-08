@@ -15,7 +15,7 @@ import swd4ta022.ticketguru.domain.Ticket;
 import swd4ta022.ticketguru.domain.TicketRepository;
 import swd4ta022.ticketguru.domain.Transaction;
 import swd4ta022.ticketguru.domain.TransactionRepository;
-import swd4ta022.ticketguru.domain.Type;
+import swd4ta022.ticketguru.domain.TicketType;
 import swd4ta022.ticketguru.domain.TypeRepository;
 //import swd4ta022.ticketguru.domain.Appuser;
 //import swd4ta022.ticketguru.domain.AppuserRepository;
@@ -48,9 +48,9 @@ public class TicketguruApplication {
 			 ventrepository.save(event1);
 			 ventrepository.save(event2);
 			 
-			 Type type1 = new Type("Child", 10.0, event2);
-			 Type type2 = new Type("Adult", 30.0, event1);
-			 Type type3 = new Type("Student", 15.0, event1);
+			 TicketType type1 = new TicketType("Child", 10.0, event2);
+			 TicketType type2 = new TicketType("Adult", 30.0, event1);
+			 TicketType type3 = new TicketType("Student", 15.0, event1);
 			 typerepository.save(type1);
 			 typerepository.save(type2);
 			 typerepository.save(type3);

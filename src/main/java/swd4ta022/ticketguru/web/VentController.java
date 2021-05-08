@@ -15,6 +15,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +26,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import swd4ta022.ticketguru.domain.Vent;
+import swd4ta022.ticketguru.domain.VentDTO;
 import swd4ta022.ticketguru.domain.VentRepository;
 import swd4ta022.ticketguru.domain.Venue;
 
@@ -34,7 +36,7 @@ import swd4ta022.ticketguru.domain.Venue;
 public class VentController {
 	
 	@Autowired 
-	private VentRepository vrepository; 	
+	private VentRepository vrepository; 
 	
 	// REST-metodit:
 	

@@ -9,6 +9,8 @@ import swd4ta022.ticketguru.TicketguruApplication;
 
 import swd4ta022.ticketguru.domain.Vent;
 import swd4ta022.ticketguru.domain.VentRepository;
+import swd4ta022.ticketguru.domain.Appuser;
+import swd4ta022.ticketguru.domain.AppuserRepository;
 import swd4ta022.ticketguru.domain.Ticket;
 import swd4ta022.ticketguru.domain.TicketRepository;
 import swd4ta022.ticketguru.domain.Transaction;
@@ -31,7 +33,7 @@ public class TicketguruApplication {
 		
 	}
 	@Bean
-	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository/*, AppuserRepository arepository*/) {
+	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository, AppuserRepository arepository) {
 		 return (args)->{
 			 
 			 Venue venue1 = new Venue("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
@@ -58,9 +60,9 @@ public class TicketguruApplication {
 			 //trrepository.save(transaction1);
 
 				 //User
-				/* Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
+				Appuser appuser = new Appuser("Tuomas", "Martsa", "user", "user",
 				 "user"); arepository.save(appuser);
-				 */
+				
 			 
 
 		 };

@@ -46,7 +46,7 @@ public class Vent {
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="vent")
 	@JsonBackReference
-	private List<Type> types;
+	private List<TicketType> types;
 
 	public Vent() {
 	}
@@ -120,18 +120,14 @@ public class Vent {
 		this.venue = venue;
 	}
 
-	public List<Type> getTypes() {
+	public List<TicketType> getTypes() {
 		return types;
 	}
 
-	public void setTypes(List<Type> types) {
+	public void setTypes(List<TicketType> types) {
 		this.types = types;
 	}
 
 	
 	
 }
-	
-	
-	
-	

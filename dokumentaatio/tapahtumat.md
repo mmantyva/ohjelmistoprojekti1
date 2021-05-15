@@ -23,10 +23,10 @@
 
 ```json
 {
-    "eventid": 3,
-    "eventtime": "22.1.2021. klo. 19",
+    "ventid": 3,
+    "venttime": "22.1.2021. klo. 19",
     "performer": "Danny",
-    "desc": "Kuvaus1",
+    "description": "Kuvaus1",
     "capacity": 2000,
     "venue": {
         "venueid": 1,
@@ -35,7 +35,7 @@
         "city": "Helsinki",
         "venuename": "Tavastia"
     },
-    "eventname": "Iso D"
+    "ventname": "Iso D"
 }
 ```
 ## Tallenna uusi tapahtuma
@@ -48,15 +48,15 @@
 ```json
 {
     "performer": "Artisti", 
-    "eventtime":"27.2.2021. klo 18:30", 
-    "desc": "Konsertti", 
-    "eventname": "Tapahtuma", 
+    "venttime":"27.2.2021. klo 18:30", 
+    "description": "Konsertti", 
+    "ventname": "Tapahtuma", 
     "capacity": "150",
     "venue": { "venueid":{id} }
 }
 ```
 
-* Tapahtumalle luodaan EventID automaattisesti.
+* Tapahtumalle luodaan VentID automaattisesti.
 * Jos paikka annetaan kutsussa, on paikkaa vastaava VenueID on löydyttävä tietokannasta.
 
 **Vastauksen paluukoodi**: `201 Created`
@@ -69,8 +69,8 @@
 ***Kutsun esimerkki sisältö:***
 ```json
 {
-    "eventtime":"muokattu aika",
-    "desc": "muokattu kuvaus"}
+    "venttime":"muokattu aika",
+    "description": "muokattu kuvaus"}
 }
 ```
 ***Paikan lisääminen tapahtumalle:***

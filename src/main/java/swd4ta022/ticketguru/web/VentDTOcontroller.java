@@ -18,20 +18,13 @@ import swd4ta022.ticketguru.domain.Venue;
 @RestController
 public class VentDTOcontroller {
 	
-	@Autowired 
-	private VentService ventService;
+
 	@Autowired 
 	private VentRepository ventRepository;
 	@Autowired 
 	private TypeRepository typeRepository;
 	
-	@GetMapping("/getevents")
-	@ResponseBody
-	public List<VentDTO> getAllEvents() {
-		
-		List <VentDTO> eventVenues = ventService.getAllEvents();
-		return eventVenues;
-	}
+
 	
 	@GetMapping("/eventtickets")
 	@ResponseBody
@@ -40,9 +33,7 @@ public class VentDTOcontroller {
 		List<VentDTO> ventDTOs = new ArrayList<>();
 		for (Vent event : events) {
 			List<TicketType> ticketTypes = typeRepository.findByVent(event);
-			//Venue venue = event.getVenue();
-			//String venueName = venue.getVenuename(); 
-			ventDTOs.add(new VentDTO(event, /*venueName,*/ ticketTypes));
+			ventDTOs.add(new VentDTO(event, ticketTypes));
 		}
 		return ventDTOs;
 	}

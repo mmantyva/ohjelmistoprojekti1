@@ -23,7 +23,6 @@ public class VentDTO {
 	private String performer;
 	private String description;
 	private int capacity;
-	private String venuename;
 	private List<TicketType> types;
 	private String tickettype;
 	private double price;
@@ -66,15 +65,10 @@ public class VentDTO {
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
-	public String getVenuename() {
-		return venuename;
-	}
-	public void setVenuename(String venuename) {
-		this.venuename = venuename;
-	}
+
 	
 	public VentDTO(long ventid, String eventname, String eventtime, String performer, String description, int capacity,
-			String venuename, List<TicketType> types) {
+			 List<TicketType> types) {
 		super();
 		this.ventid = ventid;
 		this.eventname = eventname;
@@ -82,11 +76,11 @@ public class VentDTO {
 		this.performer = performer;
 		this.description = description;
 		this.capacity = capacity;
-		this.venuename = venuename;
+
 		this.setTypes(types);
 	}
 	
-	public VentDTO(Vent vent, String venuename, List<TicketType> types) {
+	public VentDTO(Vent vent, List<TicketType> types) {
 		super();
 		this.ventid = vent.getEventid();
 		this.eventname = vent.getEventname();
@@ -94,7 +88,6 @@ public class VentDTO {
 		this.performer = vent.getPerformer();
 		this.description = vent.getDescription();
 		this.capacity = vent.getCapacity();
-		this.venuename = venuename;
 		this.setTypes(types);
 	}
 	

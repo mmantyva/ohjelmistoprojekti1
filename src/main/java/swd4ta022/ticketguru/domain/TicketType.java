@@ -82,10 +82,5 @@ public class TicketType {
 	public void setTickets(List<Ticket> tickets) {
 		this.tickets = tickets;
 	}
-	
+}
 
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 22245edfa18d7ea54f383ecbef842ff794a478d8

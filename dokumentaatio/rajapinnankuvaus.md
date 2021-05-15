@@ -36,7 +36,7 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä lippua: PUT `api/tickets/{id}`
 * Poista yksittäinen lippu: DELETE `api/tickets/{id}`
 
-### Lipputyyppi-endpointit
+### [Lipputyyppi-endpointit](lipputyypit.md)
 * Näytä kaikki lipputyypit: GET `api/types`
 * Näytä yksittäinen lipputyyppi: GET `api/types/{id}`
 * Tallenna uusi lipputyyppi: POST `api/types`
@@ -44,7 +44,7 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä lipputyyppiä: PUT `api/types/{id}`
 * Poista yksittäinen lipputyyppi: DELETE `api/types/{id}`
 
-### Myyntitapahtuma-endpointit
+### [Myyntitapahtuma-endpointit](myynnit.md)
 * Näytä kaikki myyntitapahtumat: GET `api/transactions`
 * Näytä yksittäinen myyntitapahtuma: GET `api/transactions/{id}`
 * Tallenna uusi tapahtuma: POST `api/transactions`

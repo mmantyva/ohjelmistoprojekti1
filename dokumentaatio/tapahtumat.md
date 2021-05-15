@@ -145,7 +145,7 @@
 ```json
 {
     "venttime":"muokattu aika",
-    "description": "muokattu kuvaus"}
+    "description": "muokattu kuvaus"
 }
 ```
 ***Paikan lisääminen tapahtumalle:***

@@ -4,7 +4,7 @@ Hyvä ohjelmointitiimi: Eero Koski, Niina Kuusisto, Mikko Martikainen, Maisa Mä
 
 ## Johdanto
 
-Projektin aiheena on lipunmyyntijärjestelmän kehittäminen asiakkaana olevalle lipputoimistolle. Lipputoimisto tarvitsee järjestelmää lippujen myymiseen myyntipisteessään. Järjestelmän alustava nimi on TicketGuru.
+Lipputoimistona toimiva asiakasyritys on tilannut lipunmyyntijärjestelmän lippujen myymiseen myyntipisteessään. Järjestelmää käyttävät lipputoimiston työntekijät, joilla tulee olla mahdollisuus määritellä tapahtumat, joihin lippuja myydään sekä myydä ja tulostaa liput asiakkaille. Jatkokehityksessä järjestelmään voidaan lisätä verkkokauppa, josta asiakkaat voivat itse ostaa lippuja.
 
 ### Taustaa ja asiakkaan toiveita lipunmyyntijärjestelmän toiminnalle:
 * Lipputoimisto voi määritellä järjestelmään tapahtumat, joihin lippuja myydään. 
@@ -15,7 +15,7 @@ Projektin aiheena on lipunmyyntijärjestelmän kehittäminen asiakkaana olevalle
 * Järjestelmästä lipputoimisto saa tarkasteltavaksi myyntiraportteja, joissa myyntitapahtumat on eriteltynä.
 * Jatkokehityksessä järjestelmään aiotaan lisätä vielä verkkokauppa, jolla lipputoimiston asiakkaat voivat itse ostaa lippuja.
 
-Palvelu toteutetaan Javalla Spring Boot -kehystä käyttäen. Lipunmyyntijärjestelmää on tarkoitus käyttää vain tietokoneelta käsin eli käytettävinä päätelaitteina ovat pöytäkone ja läppäri.
+Palvelu toteutetaan Javalla Spring Boot -kehystä käyttäen. Tietokantana on Postgresql ja frontend toteutetaan Reactilla. Lipunmyyntijärjestelmää on tarkoitus käyttää vain tietokoneelta käsin eli käytettävinä päätelaitteina ovat pöytäkone ja läppäri.
 
 ## Järjestelmän määrittely
 ### Käyttäjäroolit

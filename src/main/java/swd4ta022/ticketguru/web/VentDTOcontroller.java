@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import swd4ta022.ticketguru.domain.TicketType;
+import swd4ta022.ticketguru.domain.Type;
 import swd4ta022.ticketguru.domain.TypeRepository;
 import swd4ta022.ticketguru.domain.Vent;
 import swd4ta022.ticketguru.domain.VentDTO;
@@ -32,7 +32,7 @@ public class VentDTOcontroller {
 		List<Vent> events = (List<Vent>) ventRepository.findAll();
 		List<VentDTO> ventDTOs = new ArrayList<>();
 		for (Vent event : events) {
-			List<TicketType> ticketTypes = typeRepository.findByVent(event);
+			List<Type> ticketTypes = typeRepository.findByVent(event);
 			ventDTOs.add(new VentDTO(event, ticketTypes));
 		}
 		return ventDTOs;

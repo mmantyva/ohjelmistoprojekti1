@@ -44,9 +44,9 @@ public class Vent {
 	@JoinColumn(name="venueid")
 	private Venue venue;
 	
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="vent")
+	@OneToMany(cascade=CascadeType.REMOVE, mappedBy="vent")
 	@JsonBackReference
-	private List<TicketType> types;
+	private List<Type> types;
 
 	public Vent() {
 	}
@@ -120,11 +120,11 @@ public class Vent {
 		this.venue = venue;
 	}
 
-	public List<TicketType> getTypes() {
+	public List<Type> getTypes() {
 		return types;
 	}
 
-	public void setTypes(List<TicketType> types) {
+	public void setTypes(List<Type> types) {
 		this.types = types;
 	}
 

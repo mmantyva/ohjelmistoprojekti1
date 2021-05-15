@@ -16,7 +16,7 @@ import javax.validation.constraints.Positive;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
-public class TicketType {
+public class Type {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long typeid;
@@ -33,10 +33,10 @@ public class TicketType {
 	@JsonBackReference
 	private List<Ticket> tickets;
 
-	public TicketType() {
+	public Type() {
 	}
 	
-	public TicketType(String typename, double price, Vent vent) {
+	public Type(String typename, double price, Vent vent) {
 		super();
 		this.typename = typename;
 		this.price = price;

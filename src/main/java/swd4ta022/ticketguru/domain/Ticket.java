@@ -27,7 +27,7 @@ public class Ticket {
 	
 	@ManyToOne
 	@JoinColumn(name = "typeid")
-	private TicketType type;
+	private Type type;
 	
 	@ManyToOne
 	@JoinColumn(name = "trid")
@@ -35,7 +35,7 @@ public class Ticket {
 
 	public Ticket() {}
 	
-	public Ticket(Date used, /*Vent vent,*/ TicketType type, Transaction transaction) {
+	public Ticket(Date used, /*Vent vent,*/ Type type, Transaction transaction) {
 		super();
 		this.used = used;
 		/*this.vent = vent;*/
@@ -69,11 +69,11 @@ public class Ticket {
 	}
 	*/
 
-	public TicketType getType() {
+	public Type getType() {
 		return type;
 	}
 
-	public void setType(TicketType type) {
+	public void setType(Type type) {
 		this.type = type;
 	}
 

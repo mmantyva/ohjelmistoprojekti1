@@ -15,7 +15,7 @@ import swd4ta022.ticketguru.domain.Ticket;
 import swd4ta022.ticketguru.domain.TicketRepository;
 import swd4ta022.ticketguru.domain.Transaction;
 import swd4ta022.ticketguru.domain.TransactionRepository;
-import swd4ta022.ticketguru.domain.TicketType;
+import swd4ta022.ticketguru.domain.Type;
 import swd4ta022.ticketguru.domain.TypeRepository;
 //import swd4ta022.ticketguru.domain.Appuser;
 //import swd4ta022.ticketguru.domain.AppuserRepository;

@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Positive;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import swd4ta022.ticketguru.domain.TicketType;
+import swd4ta022.ticketguru.domain.Type;
 
 public class VentDTO {
 	
@@ -23,7 +23,7 @@ public class VentDTO {
 	private String performer;
 	private String description;
 	private int capacity;
-	private List<TicketType> types;
+	private List<Type> types;
 	private String tickettype;
 	private double price;
 	
@@ -68,7 +68,7 @@ public class VentDTO {
 
 	
 	public VentDTO(long ventid, String eventname, String eventtime, String performer, String description, int capacity,
-			 List<TicketType> types) {
+			 List<Type> types) {
 		super();
 		this.ventid = ventid;
 		this.eventname = eventname;
@@ -80,7 +80,7 @@ public class VentDTO {
 		this.setTypes(types);
 	}
 	
-	public VentDTO(Vent vent, List<TicketType> types) {
+	public VentDTO(Vent vent, List<Type> types) {
 		super();
 		this.ventid = vent.getEventid();
 		this.eventname = vent.getEventname();
@@ -95,10 +95,10 @@ public class VentDTO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public List<TicketType> getTypes() {
+	public List<Type> getTypes() {
 		return types;
 	}
-	public void setTypes(List<TicketType> types) {
+	public void setTypes(List<Type> types) {
 		this.types = types;
 	}
 

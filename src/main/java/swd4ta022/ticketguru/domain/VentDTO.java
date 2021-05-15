@@ -98,17 +98,6 @@ public class VentDTO {
 		this.setTypes(types);
 	}
 	
-	public VentDTO(Vent vent, List<TicketType> types) {
-		super();
-		this.ventid = vent.getEventid();
-		this.eventname = vent.getEventname();
-		this.eventtime = vent.getEventtime();
-		this.performer = vent.getPerformer();
-		this.description = vent.getDescription();
-		this.capacity = vent.getCapacity();
-		this.setTypes(types);
-	}
-	
 	public VentDTO() {
 		super();
 		// TODO Auto-generated constructor stub

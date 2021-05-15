@@ -36,24 +36,24 @@ public class TicketguruApplication {
 	 public CommandLineRunner demo(VentRepository ventrepository, VenueRepository vrepository, TypeRepository typerepository, TransactionRepository trrepository, TicketRepository ticketrepository, AppuserRepository arepository) {
 		 return (args)->{
 			 
-			 Venue venue1 = new Venue("Tavastia", "Urhokekkosenkatu", "00100", "Helsinki");
-			 Venue venue2 = new Venue("Finlandiatalo", "Mansku", "00100", "Helsinki");
-			 Venue venue3 = new Venue("Lutakko", "Lutakonaukio 3", "40100", "Jyväskylä");
-			 vrepository.save(venue1);
-			 vrepository.save(venue2);
-			 vrepository.save(venue3);
-			 
-			 Vent event1 = new Vent("Iso D", "11.11.2022", "Danny", "Kuvaus1", 2000, vrepository.findByVenuename("Tavastia").get(0));
-			 Vent event2 = new Vent("Konsertti", "22.1.2021. klo. 19", "Armi", "Kuvaus2", 2000, vrepository.findByVenuename("Finlandiatalo").get(0));
-			 ventrepository.save(event1);
-			 ventrepository.save(event2);
-			 
-			 TicketType type1 = new TicketType("Child", 10.0, event2);
-			 TicketType type2 = new TicketType("Adult", 30.0, event1);
-			 TicketType type3 = new TicketType("Student", 15.0, event1);
-			 typerepository.save(type1);
-			 typerepository.save(type2);
-			 typerepository.save(type3);
+				/*
+				 * Venue venue1 = new Venue("Tavastia", "Urhokekkosenkatu", "00100",
+				 * "Helsinki"); Venue venue2 = new Venue("Finlandiatalo", "Mansku", "00100",
+				 * "Helsinki"); Venue venue3 = new Venue("Lutakko", "Lutakonaukio 3", "40100",
+				 * "Jyväskylä"); vrepository.save(venue1); vrepository.save(venue2);
+				 * vrepository.save(venue3);
+				 * 
+				 * Vent event1 = new Vent("Iso D", "11.11.2022", "Danny", "Kuvaus1", 2000,
+				 * vrepository.findByVenuename("Tavastia").get(0)); Vent event2 = new
+				 * Vent("Konsertti", "22.1.2021. klo. 19", "Armi", "Kuvaus2", 2000,
+				 * vrepository.findByVenuename("Finlandiatalo").get(0));
+				 * ventrepository.save(event1); ventrepository.save(event2);
+				 * 
+				 * Type type1 = new Type("Child", 10.0, event2); Type type2 = new Type("Adult",
+				 * 30.0, event1); Type type3 = new Type("Student", 15.0, event1);
+				 * typerepository.save(type1); typerepository.save(type2);
+				 * typerepository.save(type3);
+				 */
 			 
 			 
 			//Transaction transaction1 = new Transaction("2021-03-03");

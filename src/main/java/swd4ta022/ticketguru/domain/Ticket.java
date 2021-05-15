@@ -1,3 +1,4 @@
+  
 package swd4ta022.ticketguru.domain;
 
 import javax.persistence.Entity;
@@ -63,7 +64,6 @@ public class Ticket {
 	public Vent getVent() {
 		return vent;
 	}
-
 	public void setVent (Vent vent) {
 		this.vent = vent;
 	}

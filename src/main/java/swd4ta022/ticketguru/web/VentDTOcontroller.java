@@ -40,9 +40,9 @@ public class VentDTOcontroller {
 		List<VentDTO> ventDTOs = new ArrayList<>();
 		for (Vent event : events) {
 			List<TicketType> ticketTypes = typeRepository.findByVent(event);
-			Venue venue = event.getVenue();
-			String venueName = venue.getVenuename(); 
-			ventDTOs.add(new VentDTO(event, venueName, ticketTypes));
+			//Venue venue = event.getVenue();
+			//String venueName = venue.getVenuename(); 
+			ventDTOs.add(new VentDTO(event, /*venueName,*/ ticketTypes));
 		}
 		return ventDTOs;
 	}

@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import swd4ta022.ticketguru.domain.Type;
+import swd4ta022.ticketguru.domain.TicketType;
 import swd4ta022.ticketguru.domain.TypeRepository;
 import swd4ta022.ticketguru.domain.Vent;
 
@@ -24,7 +24,7 @@ public class TypeRepositoryTest {
 
     @Test
     public void findByNameShouldReturnType() {
-        List<Type> types = repository.findByTypename("Student");
+        List<TicketType> types = repository.findByTypename("Student");
         
         assertThat(types).hasSize(1);
         assertThat(types.get(0).getPrice()).isEqualTo(15.0);
@@ -32,7 +32,7 @@ public class TypeRepositoryTest {
     
     @Test
     public void createNewType() {
-    	Type type = new Type("Really old person", 100.0, null);
+    	TicketType type = new TicketType("Really old person", 100.0, null);
     	repository.save(type);
     	assertThat(type.getTypeid()).isNotNull();
     }    

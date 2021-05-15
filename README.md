@@ -28,11 +28,11 @@ Ensimmäisessä vaiheessa järjestelmän käyttäjille on tunnistettu seuraavat 
 
 Alustava käyttötapauskaavio:
 
-![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/roolit1.jpg)
+![käyttötapauskaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/roolit1.jpg)
 
 ### Käyttäjätarinat
 
-(Tässä lipputoimiston edustaja = henkilöt, jotka ovat käyttötapauskaaviossa "tapahtuman määritteljä" ja "raportoija")
+(Tässä lipputoimiston edustaja = henkilöt, jotka ovat käyttötapauskaaviossa "tapahtuman määrittelijä" ja "raportoija")
 * **Lipputoimiston edustajana** haluan pystyä määrittelemään, mihin tapahtumiin lippuja myydään, jotta asiakkaat olisivat mahdollisimman tyytyväisiä palveluvalikoimaan
 * **Lipputoimiston edustajana** haluan pystyä määrittelemään hinnat eri lipputyypeille lipunmyynnin maksimoimiseksi
 * **Lipputoimiston edustajana** haluan, että liput ovat helposti yksilöitävissä ja merkittävissä käytetyiksi tapahtuman yhteydessä, jotta väärinkäytöksiltä ja väärennyksiltä vältyttäisiin
@@ -61,18 +61,18 @@ Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
 Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakemistossa:
 
-> ### _Events_
-> _Events-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä._
+> ### _Vents_
+> _Vents-taulu sisältää tiedot tapahtumista, joihin myydään lippuja. Yhteen tapahtumaan voidaan myydä useita eri lipputyypejä._
 >
 > Kenttä | Tyyppi | Kuvaus
 > ------ | ------ | ------
-> eventid | long PK | Tapahtuman id
+> ventid | long PK | Tapahtuman id
 > venueid | long FK | Paikan id, jossa tapahtuma järjestetään
-> eventname | String |  Tapahtuman nimi
+> ventname | String |  Tapahtuman nimi
 > performer | String | Tapahtumassa esiintyvä artisti, ryhmä tms
 > capacity | int | Asiakaspaikkojen määrä, määrittää kuinka monta lippua voidaan myydä
-> eventtime | datetime | Tapahtuman ajankohta
-> desc | String | Lyhyt kuvaus tapahtumasta
+> venttime | datetime | Tapahtuman ajankohta
+> description | String | Lyhyt kuvaus tapahtumasta
 #
 
 > ### _Venues_
@@ -95,7 +95,7 @@ Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakem
 > typeid | long PK | Lipputyypin id
 > price | float | Lipun hinta
 > typename | String | Lipputyypin kuvaus (esim. aikuinen)
-> eventid | long FK | Tapahtuman id
+> ventid | long FK | Tapahtuman id
 #
 
 > ### _Transactions_
@@ -140,4 +140,4 @@ Järjestelmässä käytetään alkuvaiheessa Basic authentication:a. Käyttäjä
 
 Salasanoista tallennetaan BCrypt tiiviste.
 
-Testikäyttöön H2 -kantaan luodaan käynnityksen yhteydessä yksi testikäyttäjä, jonka tunnukset ovat ***user/user***
+Testikäyttöön H2-kantaan luodaan käynnistyksen yhteydessä yksi testikäyttäjä, jonka tunnukset ovat ***user/user***

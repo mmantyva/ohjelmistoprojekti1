@@ -3,18 +3,12 @@
 Tähän dokumenttiin kerätään projektin edetessä päivittyvää kuvausta siihen liittyvästä REST-rajapinnasta.
 
 ## Base-URL
-Tiimin jäsenet voivat ajaa projektia kukin omalla paikallisella palvelimellaan portissa 8080, http://localhost:8080/api. Sovellus on julkaistu Herokussa, ja rajapinta saatavilla osoitteessa https://hot-ticketguru.herokuapp.com.
+Tiimin jäsenet voivat ajaa projektia kukin omalla paikallisella palvelimellaan portissa 8080, http://localhost:8080/. 
+
+Sovellus on julkaistu Herokussa, ja rajapinta saatavilla osoitteessa https://hot-ticketguru.herokuapp.com.
 
 ## Endpointit
 Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoimia, vaikka olemme jo toteuttaneet järjestelmään autentikoinnin ja autorisoinnin. 
-
-### [Paikka-endpointit](paikat.md)
-* Näytä kaikki paikat: GET `api/venues`
-* Näytä yksittäinen paikka: GET `api/venues/{id}`
-* Tallenna uusi paikka: POST `api/venues`
-* Muokkaa osaa yksittäisestä paikasta: PATCH `api/venues/{id}`
-* Muokkaa kokonaista yksittäistä paikkaa: PUT `api/venues/{id}`
-* Poista yksittäinen paikka: DELETE `api/venues/{id}`
 
 ### [Tapahtuma-endpointit](tapahtumat.md)
 * Näytä kaikki tapahtumat: GET `api/vents`
@@ -23,6 +17,16 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa osaa yksittäisestä tapahtumasta: PATCH `api/vents/{id}`
 * Muokkaa kokonaista yksittäistä tapahtumaa: PUT `api/vents/{id}`
 * Poista yksittäinen myyntitapahtuma: DELETE `api/vents/{id}`
+* Näytä kaikki tapahtumat ja tapahtumapaikat: GET `/events`
+* Näytä kaikki tapahtumat ja tapahtumiin liittyvät lipputyypit: GET `/eventtickets`
+
+### [Paikka-endpointit](paikat.md)
+* Näytä kaikki paikat: GET `api/venues`
+* Näytä yksittäinen paikka: GET `api/venues/{id}`
+* Tallenna uusi paikka: POST `api/venues`
+* Muokkaa osaa yksittäisestä paikasta: PATCH `api/venues/{id}`
+* Muokkaa kokonaista yksittäistä paikkaa: PUT `api/venues/{id}`
+* Poista yksittäinen paikka: DELETE `api/venues/{id}`
 
 ### [Lippu-endpointit](liput.md)
 * Näytä kaikki liput: GET `api/tickets`

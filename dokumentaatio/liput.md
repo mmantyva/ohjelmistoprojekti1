@@ -30,9 +30,13 @@
 ***Kutsun sisältö:***
 ```json
 {
-    "typeid": {id},
-    "trid": {id},
-    "eventid": {id}
+    "transaction": { myyntitapahtuman url-linkki },
+    "type": { lipputyypin url-linkki }
+}
+esimerkki:
+{
+    "transaction": "https://hot-ticketguru.herokuapp.com/api/transactions/21",
+    "type": "https://hot-ticketguru.herokuapp.com/api/types/147"
 }
 ```
 

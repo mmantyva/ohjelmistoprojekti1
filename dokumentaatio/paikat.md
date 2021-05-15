@@ -39,13 +39,19 @@
 }
 ```
 
-
 ## Muokkaa osaa yksittäisen paikan tiedoista
 **URL** : `api/venues/{id}`
 
 **Method** : `PATCH`
 
 **Vastauksen paluukoodi** : `200 OK`
+
+***Esimerkkikutsu:***
+```json
+{
+    "venuename": "paikka vaihdettu"
+}
+```
 
 ## Muokkaa kokonaista yksittäistä paikkaa
 **URL** : `api/venues/{id}`

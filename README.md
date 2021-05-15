@@ -57,7 +57,7 @@ Järjestelmän tietokantarakenne koostuu viidestä tietokantataulusta: tapahtuma
 
 Tietokannat ja niiden väliset yhteydet on kuvattuna alla olevassa kaaviossa:
 
-![Tietokantakaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/tietokanta.jpg)
+![Tietokantakaavio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/tietokanta.jpg)
 
 Tietokantaan sisältyvät elementit ja niiden attribuutit esitettynä tietohakemistossa:
 

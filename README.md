@@ -141,3 +141,9 @@ Järjestelmässä käytetään alkuvaiheessa Basic authentication:a. Käyttäjä
 Salasanoista tallennetaan BCrypt tiiviste.
 
 Testikäyttöön H2-kantaan luodaan käynnistyksen yhteydessä yksi testikäyttäjä, jonka tunnukset ovat ***user/user***
+
+## Testaus
+
+Testausta on toteutettu JUnit-yksikkötesteillä, integraatiotesteillä ja end-to-end -testeillä.
+
+[Testausdokumentaatio](testaus.md)

@@ -146,4 +146,4 @@ Testikäyttöön H2-kantaan luodaan käynnistyksen yhteydessä yksi testikäytt�
 
 Testausta on toteutettu JUnit-yksikkötesteillä, integraatiotesteillä ja end-to-end -testeillä.
 
-[Testausdokumentaatio](testaus.md)
+[Testausdokumentaatio](https://github.com/mmantyva/ohjelmistoprojekti1/blob/develop/dokumentaatio/testaus.md)

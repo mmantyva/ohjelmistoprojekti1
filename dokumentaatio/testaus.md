@@ -129,12 +129,10 @@ Yksittäisen lipun merkitseminen käytetyksi onnistuu edelleen, eli lippuun ilme
 
 -> toimii, testi ok 
 
-## E2E/client 
+## End-to-end -testaus 
 
-E2E-testauksessa testiskenaario on testata lipun käyttöä. Meillä on selaimella pyörivä React-clientti, jolla olisi tarkoitus saada aikaiseksi lipun myyminen tapahtumaan (joko suoraan tiettyyn eventtiin, tai lipputyypin kautta). Tämän testaaminen on valitettavasti vielä aika pahasti kesken, koska tiimin ei-niin-perinpohjainen React-osaaminen yhdistettynä tietokannan monimutkaisuuteen ja REST APIn kiemuroihin on osoittautunut melkoiseksi yhdistelmäksi... 
+E2E-testauksessa testiskenaario on testata lipun käyttöä. Meillä on selaimella pyörivä React-client, jolla olisi tarkoitus saada aikaiseksi lipun myyminen tapahtumaan (joko suoraan tiettyyn tapahtumaan tai lipputyypin kautta).
 
-Lipunmyynticlientti osaa hakea tietokannastamme tietoa ja saa sen näkyville taulukkoon 
-
--> tämä on nyt se ainoa asia mikä toistaiseksi jotenkin toimii, testi ok 
+Lipunmyynticlient osaa hakea tietokannastamme tietoa ja saa sen näkyville taulukkoon.
 
  

@@ -36,7 +36,7 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä lippua: PUT `api/tickets/{id}`
 * Poista yksittäinen lippu: DELETE `api/tickets/{id}`
 
-### [Lipputyyppi-endpointit](lipputyypit.md)
+### [Lipputyyppi-endpointit](lipputyyppi.md)
 * Näytä kaikki lipputyypit: GET `api/types`
 * Näytä yksittäinen lipputyyppi: GET `api/types/{id}`
 * Tallenna uusi lipputyyppi: POST `api/types`
@@ -44,19 +44,19 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Muokkaa kokonaista yksittäistä lipputyyppiä: PUT `api/types/{id}`
 * Poista yksittäinen lipputyyppi: DELETE `api/types/{id}`
 
-### [Myyntitapahtuma-endpointit](myynnit.md)
+### [Myyntitapahtuma-endpointit](myynti.md)
 * Näytä kaikki myyntitapahtumat: GET `api/transactions`
 * Näytä yksittäinen myyntitapahtuma: GET `api/transactions/{id}`
-* Tallenna uusi tapahtuma: POST `api/transactions`
+* Tallenna uusi myyntitapahtuma: POST `api/transactions`
 * Muokkaa osaa yksittäisestä myyntitapahtumasta: PATCH `api/transactions/{id}`
 * Muokkaa kokonaista yksittäistä myyntitapahtumaa: PUT `api/transactions/{id}`
-* Poista yksittäinen myyntiapahtuma: DELETE `api/transactions/{id}`
+* Poista yksittäinen myyntitapahtuma: DELETE `api/transactions/{id}`
 
 ### [Käyttäjä-endpointit](käyttäjät.md)
-* Näytä kaikki myyntitapahtumat: GET `api/users`
-* Näytä yksittäinen myyntitapahtuma: GET `api/users/{id}`
-* Tallenna uusi tapahtuma: POST `api/users`
-* Muokkaa osaa yksittäisestä myyntitapahtumasta: PATCH `api/users/{id}`
-* Muokkaa kokonaista yksittäistä myyntitapahtumaa: PUT `api/users/{id}`
-* Poista yksittäinen myyntiapahtuma: DELETE `api/users/{id}`
+* Näytä kaikki käyttäjät: GET `api/users`
+* Näytä yksittäinen käyttäjä: GET `api/users/{id}`
+* Tallenna uusi käyttäjä: POST `api/users`
+* Muokkaa osaa yksittäisestä käyttäjästä: PATCH `api/users/{id}`
+* Muokkaa kokonaista yksittäistä käyttäjää: PUT `api/users/{id}`
+* Poista yksittäinen käyttäjä: DELETE `api/users/{id}`
 

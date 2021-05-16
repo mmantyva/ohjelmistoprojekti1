@@ -62,7 +62,7 @@ esimerkki:
 
 **Vastauksen paluukoodi** : `200 OK`
 
-## Poista yksittäinen lippu:  
+## Poista yksittäinen lippu  
 **URL** : `api/tickets/{id}`
 
 **Method** : `DELETE`

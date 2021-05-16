@@ -48,7 +48,7 @@
 
 **Vastauksen paluukoodi** : `200 OK`
 
-## Poista yksittäinen myyntitapahtuma:  
+## Poista yksittäinen myyntitapahtuma  
 **URL** : `api/transactions/{id}`
 
 **Method** : `DELETE`

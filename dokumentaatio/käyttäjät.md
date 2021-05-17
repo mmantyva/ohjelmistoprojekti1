@@ -19,7 +19,7 @@
 
 **Vastauksen paluukoodi** : `200 OK`
 
-## Tallenna uusi lippu
+## Tallenna uusi käyttäjä
 
 **URL** : `api/users`
 

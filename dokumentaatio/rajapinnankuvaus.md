@@ -53,10 +53,10 @@ Tässä vaiheessa kehitystyötä kaikki käytössä olevat endpointit ovat avoim
 * Poista yksittäinen myyntitapahtuma: DELETE `api/transactions/{id}`
 
 ### [Käyttäjä-endpointit](käyttäjät.md)
-* Näytä kaikki käyttäjät: GET `api/users`
-* Näytä yksittäinen käyttäjä: GET `api/users/{id}`
-* Tallenna uusi käyttäjä: POST `api/users`
-* Muokkaa osaa yksittäisestä käyttäjästä: PATCH `api/users/{id}`
-* Muokkaa kokonaista yksittäistä käyttäjää: PUT `api/users/{id}`
-* Poista yksittäinen käyttäjä: DELETE `api/users/{id}`
+* Näytä kaikki käyttäjät: GET `api/appusers`
+* Näytä yksittäinen käyttäjä: GET `api/appusers/{id}`
+* Tallenna uusi käyttäjä: POST `api/appusers`
+* Muokkaa osaa yksittäisestä käyttäjästä: PATCH `api/appusers/{id}`
+* Muokkaa kokonaista yksittäistä käyttäjää: PUT `api/appusers/{id}`
+* Poista yksittäinen käyttäjä: DELETE `api/appusers/{id}`
 

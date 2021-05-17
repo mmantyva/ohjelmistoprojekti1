@@ -5,7 +5,7 @@
 
 ## Näytä kaikki käyttäjät
 
-**URL** : `api/users`
+**URL** : `api/appusers`
 
 **Method** : `GET`
 
@@ -13,7 +13,7 @@
 
 ## Näytä yksittäinen käyttäjä
 
-**URL** : `api/users/{id}`
+**URL** : `api/appusers/{id}`
 
 **Method** : `GET`
 
@@ -21,7 +21,7 @@
 
 ## Tallenna uusi käyttäjä
 
-**URL** : `api/users`
+**URL** : `api/appusers`
 
 **Method** : `POST`
 
@@ -40,7 +40,7 @@
 ```
 
 ## Muokkaa osaa yksittäisen käyttäjän tiedoista
-**URL** : `api/users/{id}`
+**URL** : `api/appusers/{id}`
 
 **Method** : `PATCH`
 
@@ -48,14 +48,14 @@
 
 ## Muokkaa yksittäisen käyttäjän kaikkia tietoja
 
-**URL** : `api/users/{id}`
+**URL** : `api/appusers/{id}`
 
 **Method** : `PUT`
 
 **Vastauksen paluukoodi** : `200 OK`
 
 ## Poista yksittäinen käyttäjä 
-**URL** : `api/users/{id}`
+**URL** : `api/appusers/{id}`
 
 **Method** : `DELETE`
 
